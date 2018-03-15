@@ -4,7 +4,6 @@
 #import "Core/System.h"
 #import "Core/Config.h"
 #import "Common/Log.h"
-
 #import <AVFoundation/AVFoundation.h>
 
 @implementation AppDelegate
@@ -82,6 +81,11 @@
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];
 	
+    NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    //_webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
+    //[_webUploader start];
+    //NSLog(@"Visit %@ in your web browser", _webUploader.serverURL);
+    
 	return YES;
 }
 

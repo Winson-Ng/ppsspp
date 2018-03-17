@@ -74,6 +74,8 @@
 
 #include <sstream>
 
+#include "Util/ShareInfo.h"
+
 bool MainScreen::showHomebrewTab = false;
 
 class GameButton : public UI::Clickable {
@@ -830,7 +832,12 @@ void MainScreen::CreateViews() {
 		leftColumn->Add(new TextView(mm->T("PPSSPP can't load games or save right now"), ALIGN_HCENTER, false));
 		leftColumn->Add(new Spacer(new LinearLayoutParams(0.1f)));
 	}
+    
+    
+    leftColumn->Add(new TextView(mm->T("WebFileManager: " + util::ShareInfo::Instance().Get("WebFileManagerUrl")), ALIGN_HCENTER, false));
 
+    
+    
 	ViewGroup *rightColumn = new ScrollView(ORIENT_VERTICAL);
 	LinearLayout *rightColumnItems = new LinearLayout(ORIENT_VERTICAL, new LinearLayoutParams(FILL_PARENT, WRAP_CONTENT));
 	rightColumnItems->SetSpacing(0.0f);

@@ -712,7 +712,63 @@
 		F429EFA1FB5A4304B04D0EB0 /* CompLoadStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D66728DB8E4CDFA11984B8 /* CompLoadStore.cpp */; };
 		F48DA35BACDE457789EACE78 /* zip_get_archive_comment.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC820FD97549439FDF724F /* zip_get_archive_comment.c */; };
 		F4FFE592F337493688191CB7 /* sceUsbGps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEA20BCE70CD4DCA84C9FBEF /* sceUsbGps.cpp */; };
+		F53FFF1C205D6905006EB7F8 /* WebFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */; };
 		F5400BF3C3CE4D94A839944E /* sceCcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53CC983409947088472B4CF /* sceCcc.cpp */; };
+		F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C693205D08FF003B6975 /* GCDWebDAVServer.m */; };
+		F5431DD4205D7CBC005B9A0C /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6A3205D0902003B6975 /* GCDWebServer.m */; };
+		F5431DD5205D7CC1005B9A0C /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AC205D0904003B6975 /* GCDWebServerConnection.m */; };
+		F5431DD6205D7CC4005B9A0C /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C69A205D0901003B6975 /* GCDWebServerDataRequest.m */; };
+		F5431DD7205D7CC8005B9A0C /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6A8205D0903003B6975 /* GCDWebServerDataResponse.m */; };
+		F5431DD8205D7CCA005B9A0C /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AD205D0904003B6975 /* GCDWebServerErrorResponse.m */; };
+		F5431DD9205D7CCF005B9A0C /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AA205D0904003B6975 /* GCDWebServerFileRequest.m */; };
+		F5431DDA205D7CD3005B9A0C /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6A1205D0902003B6975 /* GCDWebServerFileResponse.m */; };
+		F5431DDB205D7CD7005B9A0C /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C692205D08FF003B6975 /* GCDWebServerFunctions.m */; };
+		F5431DDC205D7CDA005B9A0C /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6A5205D0903003B6975 /* GCDWebServerMultiPartFormRequest.m */; };
+		F5431DDD205D7CDD005B9A0C /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AE205D0905003B6975 /* GCDWebServerRequest.m */; };
+		F5431DDE205D7CE0005B9A0C /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C698205D0900003B6975 /* GCDWebServerResponse.m */; };
+		F5431DDF205D7CE4005B9A0C /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C695205D0900003B6975 /* GCDWebServerStreamedResponse.m */; };
+		F5431DE0205D7CE7005B9A0C /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6B1205D0906003B6975 /* GCDWebServerURLEncodedFormRequest.m */; };
+		F5431DE1205D7CEC005B9A0C /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AF205D0905003B6975 /* GCDWebUploader.m */; };
+		F5431DE5205D9697005B9A0C /* ShareInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5431DE2205D9138005B9A0C /* ShareInfo.cpp */; };
+		F58CE912205BDBDC00C06958 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE30F2A77444818B4DEA0BB /* Launch Screen.storyboard */; };
+		F58CE914205BDBDC00C06958 /* BackgroundAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E699ED5D0C44C208F6DDD6A /* BackgroundAudio.cpp */; };
+		F58CE915205BDBDC00C06958 /* ComboKeyMappingScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC968ACD8FB345E2889A55BE /* ComboKeyMappingScreen.cpp */; };
+		F58CE916205BDBDC00C06958 /* ControlMappingScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7450F7CD2E5245E9BEBFB9A1 /* ControlMappingScreen.cpp */; };
+		F58CE917205BDBDC00C06958 /* CwCheatScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA135570EDF4493EA35B9388 /* CwCheatScreen.cpp */; };
+		F58CE918205BDBDC00C06958 /* DevScreens.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 476358CA34644F5A8DB97CE3 /* DevScreens.cpp */; };
+		F58CE919205BDBDC00C06958 /* DisplayLayoutEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F633CE7005C3476D8B24A8AB /* DisplayLayoutEditor.cpp */; };
+		F58CE91A205BDBDC00C06958 /* DisplayLayoutScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FB4455E9AE940048CDB4424 /* DisplayLayoutScreen.cpp */; };
+		F58CE91B205BDBDC00C06958 /* EmuScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A83A240703849D68A2EAA6B /* EmuScreen.cpp */; };
+		F58CE91C205BDBDC00C06958 /* GameInfoCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4187FC99F03D489F9561CFD1 /* GameInfoCache.cpp */; };
+		F58CE91D205BDBDC00C06958 /* GameScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 101500AAB7FE4EBA86F579AD /* GameScreen.cpp */; };
+		F58CE91E205BDBDC00C06958 /* GameSettingsScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4CCEE1F31AC47718904CD03 /* GameSettingsScreen.cpp */; };
+		F58CE91F205BDBDC00C06958 /* GamepadEmu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63F16DC16A3C4E2CB355293D /* GamepadEmu.cpp */; };
+		F58CE920205BDBDC00C06958 /* InstallZipScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59F78285612244EB87F1CA38 /* InstallZipScreen.cpp */; };
+		F58CE921205BDBDC00C06958 /* MainScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A67EA728B8E4C36AED5876B /* MainScreen.cpp */; };
+		F58CE922205BDBDC00C06958 /* MiscScreens.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D305EA6BBDD34F408D305BA4 /* MiscScreens.cpp */; };
+		F58CE923205BDBDC00C06958 /* NativeApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9F7E17926304C50BEC89E96 /* NativeApp.cpp */; };
+		F58CE924205BDBDC00C06958 /* OnScreenDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 714A4E47B3134ADCB643314E /* OnScreenDisplay.cpp */; };
+		F58CE925205BDBDC00C06958 /* PauseScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8F279676E3D432C8614C621 /* PauseScreen.cpp */; };
+		F58CE926205BDBDC00C06958 /* ProfilerDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0DB19FEF67048458AE095FF /* ProfilerDraw.cpp */; };
+		F58CE927205BDBDC00C06958 /* RemoteISOScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37571455CE34C8E82990EE6 /* RemoteISOScreen.cpp */; };
+		F58CE928205BDBDC00C06958 /* ReportScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33D10323056D48888C870AF3 /* ReportScreen.cpp */; };
+		F58CE929205BDBDC00C06958 /* SavedataScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71C6D28C96F450C848CFDB1 /* SavedataScreen.cpp */; };
+		F58CE92A205BDBDC00C06958 /* Store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83B49FB59DF14272AE08853F /* Store.cpp */; };
+		F58CE92B205BDBDC00C06958 /* TextureUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE24121F774C41D6A3F976EA /* TextureUtil.cpp */; };
+		F58CE92C205BDBDC00C06958 /* TiltAnalogSettingsScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 332CB958566146EF9BB7DE4C /* TiltAnalogSettingsScreen.cpp */; };
+		F58CE92D205BDBDC00C06958 /* TiltEventProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FFEB45E6A2141BC9650DE68 /* TiltEventProcessor.cpp */; };
+		F58CE92E205BDBDC00C06958 /* TouchControlLayoutScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F86C905A928343988B08A087 /* TouchControlLayoutScreen.cpp */; };
+		F58CE92F205BDBDC00C06958 /* TouchControlVisibilityScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3A01CEFB9BE46C2AFDE7E76 /* TouchControlVisibilityScreen.cpp */; };
+		F58CE930205BDBDC00C06958 /* ui_atlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7621C78E12A349D987D11617 /* ui_atlas.cpp */; };
+		F58CE931205BDBDC00C06958 /* TestRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 693DAA0D27FB4EA19691DBFE /* TestRunner.cpp */; };
+		F58CE93C205BE41D00C06958 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE93B205BE41C00C06958 /* UIKit.framework */; };
+		F58CE93E205BE42500C06958 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE93D205BE42400C06958 /* CFNetwork.framework */; };
+		F58CE940205BE42D00C06958 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */; };
+		F58CE942205BE43400C06958 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE941205BE43400C06958 /* libz.tbd */; };
+		F58CE944205BE44300C06958 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE943205BE44200C06958 /* libxml2.tbd */; };
+		F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5E2C69C205D0901003B6975 /* GCDWebUploader.bundle */; };
+		F5E2C6C3205D353A003B6975 /* FileManagerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E2C6C2205D353A003B6975 /* FileManagerView.xib */; };
+		F5E2C6C6205D35B6003B6975 /* FileManagerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */; };
 		F60DF44324C847E9B7FA28F3 /* Pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4EB30D815A848818ECF9722 /* Pool.cpp */; };
 		F6A5C502BF5742D79E1470EA /* RetryingFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B247221A72413D82700A17 /* RetryingFileLoader.cpp */; };
 		F6B0B77FCA34492C89D0EA54 /* Arm64CompALU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D7FA7987D5A442BAD52C579 /* Arm64CompALU.cpp */; };
@@ -1511,6 +1567,174 @@
 			remoteGlobalIDString = 4F3945F24CE54D738266D766;
 			remoteInfo = HLSL;
 		};
+		F58CE8E2205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C371FA0544943D48874673A;
+			remoteInfo = udis86;
+		};
+		F58CE8E4205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0581905845C744C09911FE5A;
+			remoteInfo = "spirv-cross-glsl";
+		};
+		F58CE8E6205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B6766D3BC1549A5AB33A535;
+			remoteInfo = "spirv-cross-core";
+		};
+		F58CE8E8205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBE67B2210F544C9894F90B2;
+			remoteInfo = xxhash;
+		};
+		F58CE8EA205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7913D75739D1410EA9CD2415;
+			remoteInfo = xbrz;
+		};
+		F58CE8EC205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E6EC761EA254372A4876CC0;
+			remoteInfo = vjson;
+		};
+		F58CE8EE205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61FE0EE72FCB4116948C73C4;
+			remoteInfo = png17;
+		};
+		F58CE8F0205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72DE618FCBB947319A4E9312;
+			remoteInfo = libzip;
+		};
+		F58CE8F2205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22B3FCD43CA84D7F9B6D5D81;
+			remoteInfo = cityhash;
+		};
+		F58CE8F4205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A782C6EF047D48969E075DDB;
+			remoteInfo = sfmt19937;
+		};
+		F58CE8F6205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 274540AC667A48FE9EC22888;
+			remoteInfo = kirk;
+		};
+		F58CE8F8205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C7968A904E54935897C3168;
+			remoteInfo = rg_etc1;
+		};
+		F58CE8FA205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A6C412AAAB4B8CA5812A5B;
+			remoteInfo = Core;
+		};
+		F58CE8FC205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D86861A70E44939BA7A874E;
+			remoteInfo = native;
+		};
+		F58CE8FE205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C15C93A7255046A882AAA966;
+			remoteInfo = Common;
+		};
+		F58CE900205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C96F924291845328CDE731B;
+			remoteInfo = armips;
+		};
+		F58CE902205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC6397A4DD6E4513A4B76EEB;
+			remoteInfo = glslang;
+		};
+		F58CE904205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 110970848F2242D1B883FB0D;
+			remoteInfo = OSDependent;
+		};
+		F58CE906205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90DAEBCF367242D39A45AB23;
+			remoteInfo = ZERO_CHECK;
+		};
+		F58CE908205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81E77FF5A4F74D1084B2C4A6;
+			remoteInfo = OGLCompiler;
+		};
+		F58CE90A205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E93164F5CC3A4FF482AD083F;
+			remoteInfo = SPVRemapper;
+		};
+		F58CE90C205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FEDAA8E179F4117B9D48FF3;
+			remoteInfo = SPIRV;
+		};
+		F58CE90E205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F3945F24CE54D738266D766;
+			remoteInfo = HLSL;
+		};
+		F58CE910205BDBDC00C06958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 565394F4B55A4D3BA0830665;
+			remoteInfo = snappy;
+		};
 		F6DF24911E95401E8D47E66C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAC26C3EA647421DA315887F /* Project object */;
@@ -1540,6 +1764,29 @@
 			remoteInfo = rg_etc1;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F58CE935205BDBDC00C06958 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B85301205BC47400DB9BD8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		006B33B6055B4C309F02DA9B /* HTTPFileLoader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = HTTPFileLoader.cpp; path = Core/FileLoaders/HTTPFileLoader.cpp; sourceTree = SOURCE_ROOT; };
@@ -2798,7 +3045,55 @@
 		F4EB30D815A848818ECF9722 /* Pool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Pool.cpp; path = ext/armips/Archs/ARM/Pool.cpp; sourceTree = SOURCE_ROOT; };
 		F529D0D53B854C69B3B1D2F0 /* scePsmf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scePsmf.cpp; path = Core/HLE/scePsmf.cpp; sourceTree = SOURCE_ROOT; };
 		F534EC51D1104608BD9CF1E9 /* PSPPlaceholderDialog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PSPPlaceholderDialog.h; path = Core/Dialog/PSPPlaceholderDialog.h; sourceTree = SOURCE_ROOT; };
+		F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WebFileManager.mm; sourceTree = "<group>"; };
+		F53FFF1B205D6905006EB7F8 /* WebFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebFileManager.h; sourceTree = "<group>"; };
+		F5431DE2205D9138005B9A0C /* ShareInfo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = ShareInfo.cpp; path = Util/ShareInfo.cpp; sourceTree = SOURCE_ROOT; };
+		F5431DE3205D9138005B9A0C /* ShareInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareInfo.h; path = Util/ShareInfo.h; sourceTree = SOURCE_ROOT; };
+		F5431DE6205DAABC005B9A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "build-ios/CMakeFiles/PPSSPP.dir/Info.plist"; sourceTree = "<group>"; };
+		F58CE939205BDBDC00C06958 /* PPSSPP Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPSSPP Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58CE93B205BE41C00C06958 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F58CE93D205BE42400C06958 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F58CE941205BE43400C06958 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F58CE943205BE44200C06958 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		F5AE9082A76D4818B78F04CC /* AsyncIOManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AsyncIOManager.h; path = Core/HW/AsyncIOManager.h; sourceTree = SOURCE_ROOT; };
+		F5E2C690205D08FF003B6975 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/GCDWebServerConnection.h; sourceTree = SOURCE_ROOT; };
+		F5E2C691205D08FF003B6975 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = GCDWebServer/GCDWebServerDataRequest.h; sourceTree = SOURCE_ROOT; };
+		F5E2C692205D08FF003B6975 /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFunctions.m; path = GCDWebServer/GCDWebServerFunctions.m; sourceTree = SOURCE_ROOT; };
+		F5E2C693205D08FF003B6975 /* GCDWebDAVServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebDAVServer.m; path = GCDWebServer/GCDWebDAVServer.m; sourceTree = SOURCE_ROOT; };
+		F5E2C694205D0900003B6975 /* GCDWebServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerResponse.h; path = GCDWebServer/GCDWebServerResponse.h; sourceTree = SOURCE_ROOT; };
+		F5E2C695205D0900003B6975 /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerStreamedResponse.m; path = GCDWebServer/GCDWebServerStreamedResponse.m; sourceTree = SOURCE_ROOT; };
+		F5E2C696205D0900003B6975 /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileRequest.h; path = GCDWebServer/GCDWebServerFileRequest.h; sourceTree = SOURCE_ROOT; };
+		F5E2C697205D0900003B6975 /* GCDWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServer.h; path = GCDWebServer/GCDWebServer.h; sourceTree = SOURCE_ROOT; };
+		F5E2C698205D0900003B6975 /* GCDWebServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerResponse.m; path = GCDWebServer/GCDWebServerResponse.m; sourceTree = SOURCE_ROOT; };
+		F5E2C699205D0900003B6975 /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataResponse.h; path = GCDWebServer/GCDWebServerDataResponse.h; sourceTree = SOURCE_ROOT; };
+		F5E2C69A205D0901003B6975 /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataRequest.m; path = GCDWebServer/GCDWebServerDataRequest.m; sourceTree = SOURCE_ROOT; };
+		F5E2C69B205D0901003B6975 /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerHTTPStatusCodes.h; path = GCDWebServer/GCDWebServerHTTPStatusCodes.h; sourceTree = SOURCE_ROOT; };
+		F5E2C69C205D0901003B6975 /* GCDWebUploader.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GCDWebUploader.bundle; path = GCDWebServer/GCDWebUploader.bundle; sourceTree = SOURCE_ROOT; };
+		F5E2C69D205D0901003B6975 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerURLEncodedFormRequest.h; path = GCDWebServer/GCDWebServerURLEncodedFormRequest.h; sourceTree = SOURCE_ROOT; };
+		F5E2C69E205D0901003B6975 /* GCDWebUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebUploader.h; path = GCDWebServer/GCDWebUploader.h; sourceTree = SOURCE_ROOT; };
+		F5E2C69F205D0902003B6975 /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFunctions.h; path = GCDWebServer/GCDWebServerFunctions.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A0205D0902003B6975 /* GCDWebServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerRequest.h; path = GCDWebServer/GCDWebServerRequest.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A1205D0902003B6975 /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileResponse.m; path = GCDWebServer/GCDWebServerFileResponse.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6A2205D0902003B6975 /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerFileResponse.h; path = GCDWebServer/GCDWebServerFileResponse.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A3205D0902003B6975 /* GCDWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServer.m; path = GCDWebServer/GCDWebServer.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6A4205D0903003B6975 /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerMultiPartFormRequest.h; path = GCDWebServer/GCDWebServerMultiPartFormRequest.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A5205D0903003B6975 /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerMultiPartFormRequest.m; path = GCDWebServer/GCDWebServerMultiPartFormRequest.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6A6205D0903003B6975 /* GCDWebDAVServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebDAVServer.h; path = GCDWebServer/GCDWebDAVServer.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A7205D0903003B6975 /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerStreamedResponse.h; path = GCDWebServer/GCDWebServerStreamedResponse.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6A8205D0903003B6975 /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerDataResponse.m; path = GCDWebServer/GCDWebServerDataResponse.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6A9205D0904003B6975 /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerPrivate.h; path = GCDWebServer/GCDWebServerPrivate.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6AA205D0904003B6975 /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerFileRequest.m; path = GCDWebServer/GCDWebServerFileRequest.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6AB205D0904003B6975 /* GCDWebServers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServers.h; path = GCDWebServer/GCDWebServers.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6AC205D0904003B6975 /* GCDWebServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerConnection.m; path = GCDWebServer/GCDWebServerConnection.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6AD205D0904003B6975 /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerErrorResponse.m; path = GCDWebServer/GCDWebServerErrorResponse.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6AE205D0905003B6975 /* GCDWebServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerRequest.m; path = GCDWebServer/GCDWebServerRequest.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6AF205D0905003B6975 /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebUploader.m; path = GCDWebServer/GCDWebUploader.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6B0205D0906003B6975 /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerErrorResponse.h; path = GCDWebServer/GCDWebServerErrorResponse.h; sourceTree = SOURCE_ROOT; };
+		F5E2C6B1205D0906003B6975 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/GCDWebServerURLEncodedFormRequest.m; sourceTree = SOURCE_ROOT; };
+		F5E2C6C2205D353A003B6975 /* FileManagerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerView.xib; path = ios/FileManagerView.xib; sourceTree = "<group>"; };
+		F5E2C6C4205D357D003B6975 /* FileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerViewController.h; path = ios/FileManagerViewController.h; sourceTree = "<group>"; };
+		F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FileManagerViewController.mm; path = ios/FileManagerViewController.mm; sourceTree = "<group>"; };
 		F5E54AA6A40C4B1D9946AC1D /* zip_rename.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zip_rename.c; path = ext/native/ext/libzip/zip_rename.c; sourceTree = SOURCE_ROOT; };
 		F5F7361294084A8A992F03E9 /* MIPSVFPUUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MIPSVFPUUtils.h; path = Core/MIPS/MIPSVFPUUtils.h; sourceTree = SOURCE_ROOT; };
 		F603AFDF014B46C599C20987 /* TextureScalerGLES.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TextureScalerGLES.cpp; path = GPU/GLES/TextureScalerGLES.cpp; sourceTree = SOURCE_ROOT; };
@@ -2843,6 +3138,28 @@
 		FF40D8E9AE4949A98EC7021C /* SFMT.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SFMT.h; path = ext/sfmt19937/SFMT.h; sourceTree = SOURCE_ROOT; };
 		FFC17AC07608488A985F318A /* path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = ext/native/file/path.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F58CE933205BDBDC00C06958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B85300205BC47400DB9BD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58CE944205BE44300C06958 /* libxml2.tbd in Frameworks */,
+				F58CE942205BE43400C06958 /* libz.tbd in Frameworks */,
+				F58CE940205BE42D00C06958 /* MobileCoreServices.framework in Frameworks */,
+				F58CE93E205BE42500C06958 /* CFNetwork.framework in Frameworks */,
+				F58CE93C205BE41D00C06958 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		006B085328EF4FBC8C7D059D /* Header Files */ = {
@@ -3255,6 +3572,7 @@
 		1D71F2DC7FBC4CCFB51CFF01 = {
 			isa = PBXGroup;
 			children = (
+				F53FFF19205D68A6006EB7F8 /* Util */,
 				8172BE1E3EBE4880BB8E83D0 /* PPSSPP */,
 				F43B58A0E6794C01BB9215A5 /* GitVersion */,
 				18536F0DC31849EBAA8C3DA3 /* xxhash */,
@@ -3285,6 +3603,7 @@
 				6106A2CF76F3462DA2A09FBC /* spirv-cross-glsl */,
 				D257DA02C79B4C33A59EDF5D /* spirv-cross-core */,
 				2F30B7DE7D1C4353B0005C98 /* Products */,
+				F58CE8DC205BD7F800C06958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3395,6 +3714,8 @@
 		2AAE3A6E6A0A4F1DBED2398B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				F5431DE6205DAABC005B9A0C /* Info.plist */,
+				F5E2C65D205C259F003B6975 /* GCDWebServer */,
 				6685CFEDF7F84238AE2174DF /* iCade */,
 				AE60685F57554ADE91C369E7 /* AppDelegate.h */,
 				16865DB572864DBA89CEC2AA /* AppDelegate.mm */,
@@ -3407,6 +3728,9 @@
 				4E7C1C01345B4B0D99BB9EDA /* iOSCoreAudio.h */,
 				4A417F77BCB24A988685780E /* iOSCoreAudio.mm */,
 				68B5F4E42ABD4E7B8C6D0FF6 /* main.mm */,
+				F5E2C6C2205D353A003B6975 /* FileManagerView.xib */,
+				F5E2C6C4205D357D003B6975 /* FileManagerViewController.h */,
+				F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -3474,6 +3798,7 @@
 				BA38E9D45B3040F28623B16F /* libspirv-cross-glsl.a */,
 				8DA78FF1FB6D44D4A378C943 /* libspirv-cross-hlsl.a */,
 				504F13407EAB453F9EEB8A65 /* libspirv-cross-msl.a */,
+				F58CE939205BDBDC00C06958 /* PPSSPP Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -5527,6 +5852,70 @@
 			name = vjson;
 			sourceTree = "<group>";
 		};
+		F53FFF19205D68A6006EB7F8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F53FFF1B205D6905006EB7F8 /* WebFileManager.h */,
+				F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */,
+				F5431DE2205D9138005B9A0C /* ShareInfo.cpp */,
+				F5431DE3205D9138005B9A0C /* ShareInfo.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F58CE8DC205BD7F800C06958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F58CE943205BE44200C06958 /* libxml2.tbd */,
+				F58CE941205BE43400C06958 /* libz.tbd */,
+				F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */,
+				F58CE93D205BE42400C06958 /* CFNetwork.framework */,
+				F58CE93B205BE41C00C06958 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5E2C65D205C259F003B6975 /* GCDWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				F5E2C6A6205D0903003B6975 /* GCDWebDAVServer.h */,
+				F5E2C693205D08FF003B6975 /* GCDWebDAVServer.m */,
+				F5E2C697205D0900003B6975 /* GCDWebServer.h */,
+				F5E2C6A3205D0902003B6975 /* GCDWebServer.m */,
+				F5E2C690205D08FF003B6975 /* GCDWebServerConnection.h */,
+				F5E2C6AC205D0904003B6975 /* GCDWebServerConnection.m */,
+				F5E2C691205D08FF003B6975 /* GCDWebServerDataRequest.h */,
+				F5E2C69A205D0901003B6975 /* GCDWebServerDataRequest.m */,
+				F5E2C699205D0900003B6975 /* GCDWebServerDataResponse.h */,
+				F5E2C6A8205D0903003B6975 /* GCDWebServerDataResponse.m */,
+				F5E2C6B0205D0906003B6975 /* GCDWebServerErrorResponse.h */,
+				F5E2C6AD205D0904003B6975 /* GCDWebServerErrorResponse.m */,
+				F5E2C696205D0900003B6975 /* GCDWebServerFileRequest.h */,
+				F5E2C6AA205D0904003B6975 /* GCDWebServerFileRequest.m */,
+				F5E2C6A2205D0902003B6975 /* GCDWebServerFileResponse.h */,
+				F5E2C6A1205D0902003B6975 /* GCDWebServerFileResponse.m */,
+				F5E2C69F205D0902003B6975 /* GCDWebServerFunctions.h */,
+				F5E2C692205D08FF003B6975 /* GCDWebServerFunctions.m */,
+				F5E2C69B205D0901003B6975 /* GCDWebServerHTTPStatusCodes.h */,
+				F5E2C6A4205D0903003B6975 /* GCDWebServerMultiPartFormRequest.h */,
+				F5E2C6A5205D0903003B6975 /* GCDWebServerMultiPartFormRequest.m */,
+				F5E2C6A9205D0904003B6975 /* GCDWebServerPrivate.h */,
+				F5E2C6A0205D0902003B6975 /* GCDWebServerRequest.h */,
+				F5E2C6AE205D0905003B6975 /* GCDWebServerRequest.m */,
+				F5E2C694205D0900003B6975 /* GCDWebServerResponse.h */,
+				F5E2C698205D0900003B6975 /* GCDWebServerResponse.m */,
+				F5E2C6AB205D0904003B6975 /* GCDWebServers.h */,
+				F5E2C6A7205D0903003B6975 /* GCDWebServerStreamedResponse.h */,
+				F5E2C695205D0900003B6975 /* GCDWebServerStreamedResponse.m */,
+				F5E2C69D205D0901003B6975 /* GCDWebServerURLEncodedFormRequest.h */,
+				F5E2C6B1205D0906003B6975 /* GCDWebServerURLEncodedFormRequest.m */,
+				F5E2C69C205D0901003B6975 /* GCDWebUploader.bundle */,
+				F5E2C69E205D0901003B6975 /* GCDWebUploader.h */,
+				F5E2C6AF205D0905003B6975 /* GCDWebUploader.m */,
+			);
+			path = GCDWebServer;
+			sourceTree = "<group>";
+		};
 		F66CB64B1AD7480DB0205A26 /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -6085,6 +6474,8 @@
 				9AC1998D5D9542C2A895F0AA /* Resources */,
 				5F0F78375D0E42A884F37109 /* Sources */,
 				B58D7EF4EE9B47A7B5DCDA0D /* CMake PostBuild Rules */,
+				F5B85300205BC47400DB9BD8 /* Frameworks */,
+				F5B85301205BC47400DB9BD8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -6168,6 +6559,49 @@
 			productReference = B7189499663F482E9BFB5F31 /* armipstests */;
 			productType = "com.apple.product-type.application";
 		};
+		F58CE8E0205BDBDC00C06958 /* PPSSPP Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F58CE936205BDBDC00C06958 /* Build configuration list for PBXNativeTarget "PPSSPP Dev" */;
+			buildPhases = (
+				F58CE911205BDBDC00C06958 /* Resources */,
+				F58CE913205BDBDC00C06958 /* Sources */,
+				F58CE932205BDBDC00C06958 /* CMake PostBuild Rules */,
+				F58CE933205BDBDC00C06958 /* Frameworks */,
+				F58CE935205BDBDC00C06958 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F58CE8E1205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8E3205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8E5205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8E7205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8E9205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8EB205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8ED205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8EF205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8F1205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8F3205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8F5205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8F7205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8F9205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8FB205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8FD205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE8FF205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE901205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE903205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE905205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE907205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE909205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE90B205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE90D205BDBDC00C06958 /* PBXTargetDependency */,
+				F58CE90F205BDBDC00C06958 /* PBXTargetDependency */,
+			);
+			name = "PPSSPP Dev";
+			productName = PPSSPP;
+			productReference = F58CE939205BDBDC00C06958 /* PPSSPP Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -6180,6 +6614,10 @@
 					CE86C35EA4BB45D9B291D1E3 = {
 						DevelopmentTeam = 9R98LWX53K;
 						ProvisioningStyle = Manual;
+					};
+					F58CE8E0205BDBDC00C06958 = {
+						DevelopmentTeam = 9R98LWX53K;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -6199,6 +6637,7 @@
 				40A6C412AAAB4B8CA5812A5B /* Core */,
 				D230EBAC8556453EAE87850F /* GitVersion */,
 				CE86C35EA4BB45D9B291D1E3 /* PPSSPP */,
+				F58CE8E0205BDBDC00C06958 /* PPSSPP Dev */,
 				90DAEBCF367242D39A45AB23 /* ZERO_CHECK */,
 				22B3FCD43CA84D7F9B6D5D81 /* cityhash */,
 				C1858E8C94D04F28A62E91A9 /* install */,
@@ -6240,7 +6679,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E2C6C3205D353A003B6975 /* FileManagerView.xib in Resources */,
 				5C432F84A9604219A7C6F574 /* Launch Screen.storyboard in Resources */,
+				F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58CE911205BDBDC00C06958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58CE912205BDBDC00C06958 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6344,6 +6793,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "make -C /Users/winsonwu/Projects/ppsspp/build-ios/ext/glslang -f /Users/winsonwu/Projects/ppsspp/build-ios/ext/glslang/CMakeScripts/Nightly_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		F58CE932205BDBDC00C06958 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/winsonwu/Projects/ppsspp/build-ios -f /Users/winsonwu/Projects/ppsspp/build-ios/CMakeScripts/PPSSPP_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -6857,17 +7317,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B414EFE747449688376F9D4 /* BackgroundAudio.cpp in Sources */,
+				F5431DDC205D7CDA005B9A0C /* GCDWebServerMultiPartFormRequest.m in Sources */,
 				2FCA2C211CFD48A397A9447B /* ComboKeyMappingScreen.cpp in Sources */,
 				C6F0B3FA1084489382EDA171 /* ControlMappingScreen.cpp in Sources */,
 				255D7895D4F94D2884E65B8D /* CwCheatScreen.cpp in Sources */,
 				8ABFF63DC6AD4FCBA65467AA /* DevScreens.cpp in Sources */,
+				F5431DDD205D7CDD005B9A0C /* GCDWebServerRequest.m in Sources */,
 				ECB3DEFC03BD493AADACC61E /* DisplayLayoutEditor.cpp in Sources */,
 				D1B751993F464F32B69CD4E6 /* DisplayLayoutScreen.cpp in Sources */,
 				7D4454927F194A7EAD0DFA53 /* EmuScreen.cpp in Sources */,
 				2BCA81DCDE3441DC81F7254A /* GameInfoCache.cpp in Sources */,
 				8C4308B3B860453A92608B71 /* GameScreen.cpp in Sources */,
+				F5E2C6C6205D35B6003B6975 /* FileManagerViewController.mm in Sources */,
+				F5431DE0205D7CE7005B9A0C /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				4BD9D64ED1334008BA8E37ED /* GameSettingsScreen.cpp in Sources */,
 				F0153DF9E7484AC7900CA5B8 /* GamepadEmu.cpp in Sources */,
+				F5431DDE205D7CE0005B9A0C /* GCDWebServerResponse.m in Sources */,
 				A62BBAA0B7BB401F85B11FC9 /* InstallZipScreen.cpp in Sources */,
 				F92451F1D12E42A8BE20C9EE /* MainScreen.cpp in Sources */,
 				BCAF924CBDDF4409AD2CD38E /* MiscScreens.cpp in Sources */,
@@ -6875,17 +7340,30 @@
 				C9A6B86F64D7410BBCD7E6C2 /* OnScreenDisplay.cpp in Sources */,
 				E0F985EE1E334057BF0B5633 /* PauseScreen.cpp in Sources */,
 				3E06CC7FBFE44425AE2B8BEC /* ProfilerDraw.cpp in Sources */,
+				F53FFF1C205D6905006EB7F8 /* WebFileManager.mm in Sources */,
+				F5431DE1205D7CEC005B9A0C /* GCDWebUploader.m in Sources */,
+				F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */,
+				F5431DD5205D7CC1005B9A0C /* GCDWebServerConnection.m in Sources */,
+				F5431DD4205D7CBC005B9A0C /* GCDWebServer.m in Sources */,
 				3810FCEFAEDE42969AA50B3D /* RemoteISOScreen.cpp in Sources */,
 				443ACE5FE1A440C19E98513F /* ReportScreen.cpp in Sources */,
+				F5431DD6205D7CC4005B9A0C /* GCDWebServerDataRequest.m in Sources */,
 				E0536B8D23434A09A28AB610 /* SavedataScreen.cpp in Sources */,
+				F5431DD8205D7CCA005B9A0C /* GCDWebServerErrorResponse.m in Sources */,
+				F5431DD7205D7CC8005B9A0C /* GCDWebServerDataResponse.m in Sources */,
+				F5431DDF205D7CE4005B9A0C /* GCDWebServerStreamedResponse.m in Sources */,
 				C53D35C447F842DAAB9FBAF2 /* Store.cpp in Sources */,
 				CAE015565FE24091A9FF0D42 /* TextureUtil.cpp in Sources */,
 				4C245BEAACC54B5CBD6EA9B6 /* TiltAnalogSettingsScreen.cpp in Sources */,
 				3C9BC7AE32F14F1BA76C5A64 /* TiltEventProcessor.cpp in Sources */,
 				AA5CD06F55CD447CA94807DF /* TouchControlLayoutScreen.cpp in Sources */,
+				F5431DDB205D7CD7005B9A0C /* GCDWebServerFunctions.m in Sources */,
 				049106C84AB2435183A36B91 /* TouchControlVisibilityScreen.cpp in Sources */,
 				7E8B8970882E412C9FBE6CB0 /* ui_atlas.cpp in Sources */,
 				CB42154522994DE1BB222B65 /* TestRunner.cpp in Sources */,
+				F5431DE5205D9697005B9A0C /* ShareInfo.cpp in Sources */,
+				F5431DD9205D7CCF005B9A0C /* GCDWebServerFileRequest.m in Sources */,
+				F5431DDA205D7CD3005B9A0C /* GCDWebServerFileResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7147,6 +7625,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2AA94C7E814E78B58963C3 /* spirv_msl.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58CE913205BDBDC00C06958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58CE914205BDBDC00C06958 /* BackgroundAudio.cpp in Sources */,
+				F58CE915205BDBDC00C06958 /* ComboKeyMappingScreen.cpp in Sources */,
+				F58CE916205BDBDC00C06958 /* ControlMappingScreen.cpp in Sources */,
+				F58CE917205BDBDC00C06958 /* CwCheatScreen.cpp in Sources */,
+				F58CE918205BDBDC00C06958 /* DevScreens.cpp in Sources */,
+				F58CE919205BDBDC00C06958 /* DisplayLayoutEditor.cpp in Sources */,
+				F58CE91A205BDBDC00C06958 /* DisplayLayoutScreen.cpp in Sources */,
+				F58CE91B205BDBDC00C06958 /* EmuScreen.cpp in Sources */,
+				F58CE91C205BDBDC00C06958 /* GameInfoCache.cpp in Sources */,
+				F58CE91D205BDBDC00C06958 /* GameScreen.cpp in Sources */,
+				F58CE91E205BDBDC00C06958 /* GameSettingsScreen.cpp in Sources */,
+				F58CE91F205BDBDC00C06958 /* GamepadEmu.cpp in Sources */,
+				F58CE920205BDBDC00C06958 /* InstallZipScreen.cpp in Sources */,
+				F58CE921205BDBDC00C06958 /* MainScreen.cpp in Sources */,
+				F58CE922205BDBDC00C06958 /* MiscScreens.cpp in Sources */,
+				F58CE923205BDBDC00C06958 /* NativeApp.cpp in Sources */,
+				F58CE924205BDBDC00C06958 /* OnScreenDisplay.cpp in Sources */,
+				F58CE925205BDBDC00C06958 /* PauseScreen.cpp in Sources */,
+				F58CE926205BDBDC00C06958 /* ProfilerDraw.cpp in Sources */,
+				F58CE927205BDBDC00C06958 /* RemoteISOScreen.cpp in Sources */,
+				F58CE928205BDBDC00C06958 /* ReportScreen.cpp in Sources */,
+				F58CE929205BDBDC00C06958 /* SavedataScreen.cpp in Sources */,
+				F58CE92A205BDBDC00C06958 /* Store.cpp in Sources */,
+				F58CE92B205BDBDC00C06958 /* TextureUtil.cpp in Sources */,
+				F58CE92C205BDBDC00C06958 /* TiltAnalogSettingsScreen.cpp in Sources */,
+				F58CE92D205BDBDC00C06958 /* TiltEventProcessor.cpp in Sources */,
+				F58CE92E205BDBDC00C06958 /* TouchControlLayoutScreen.cpp in Sources */,
+				F58CE92F205BDBDC00C06958 /* TouchControlVisibilityScreen.cpp in Sources */,
+				F58CE930205BDBDC00C06958 /* ui_atlas.cpp in Sources */,
+				F58CE931205BDBDC00C06958 /* TestRunner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7716,6 +8231,126 @@
 			target = 90DAEBCF367242D39A45AB23 /* ZERO_CHECK */;
 			targetProxy = 7C2F27685F5F4C2FB9B1C077 /* PBXContainerItemProxy */;
 		};
+		F58CE8E1205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C371FA0544943D48874673A /* udis86 */;
+			targetProxy = F58CE8E2205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8E3205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0581905845C744C09911FE5A /* spirv-cross-glsl */;
+			targetProxy = F58CE8E4205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8E5205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B6766D3BC1549A5AB33A535 /* spirv-cross-core */;
+			targetProxy = F58CE8E6205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8E7205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBE67B2210F544C9894F90B2 /* xxhash */;
+			targetProxy = F58CE8E8205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8E9205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7913D75739D1410EA9CD2415 /* xbrz */;
+			targetProxy = F58CE8EA205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8EB205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E6EC761EA254372A4876CC0 /* vjson */;
+			targetProxy = F58CE8EC205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8ED205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61FE0EE72FCB4116948C73C4 /* png17 */;
+			targetProxy = F58CE8EE205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8EF205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72DE618FCBB947319A4E9312 /* libzip */;
+			targetProxy = F58CE8F0205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8F1205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22B3FCD43CA84D7F9B6D5D81 /* cityhash */;
+			targetProxy = F58CE8F2205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8F3205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A782C6EF047D48969E075DDB /* sfmt19937 */;
+			targetProxy = F58CE8F4205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8F5205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 274540AC667A48FE9EC22888 /* kirk */;
+			targetProxy = F58CE8F6205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8F7205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C7968A904E54935897C3168 /* rg_etc1 */;
+			targetProxy = F58CE8F8205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8F9205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40A6C412AAAB4B8CA5812A5B /* Core */;
+			targetProxy = F58CE8FA205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8FB205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D86861A70E44939BA7A874E /* native */;
+			targetProxy = F58CE8FC205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8FD205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C15C93A7255046A882AAA966 /* Common */;
+			targetProxy = F58CE8FE205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE8FF205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C96F924291845328CDE731B /* armips */;
+			targetProxy = F58CE900205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE901205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC6397A4DD6E4513A4B76EEB /* glslang */;
+			targetProxy = F58CE902205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE903205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 110970848F2242D1B883FB0D /* OSDependent */;
+			targetProxy = F58CE904205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE905205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90DAEBCF367242D39A45AB23 /* ZERO_CHECK */;
+			targetProxy = F58CE906205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE907205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81E77FF5A4F74D1084B2C4A6 /* OGLCompiler */;
+			targetProxy = F58CE908205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE909205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E93164F5CC3A4FF482AD083F /* SPVRemapper */;
+			targetProxy = F58CE90A205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE90B205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FEDAA8E179F4117B9D48FF3 /* SPIRV */;
+			targetProxy = F58CE90C205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE90D205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F3945F24CE54D738266D766 /* HLSL */;
+			targetProxy = F58CE90E205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
+		F58CE90F205BDBDC00C06958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 565394F4B55A4D3BA0830665 /* snappy */;
+			targetProxy = F58CE910205BDBDC00C06958 /* PBXContainerItemProxy */;
+		};
 		F8E836C455744EF4A287FFA4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7C371FA0544943D48874673A /* udis86 */;
@@ -8134,10 +8769,8 @@
 		270C53EC6DE94497A3489410 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					arm64,
-				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -8147,6 +8780,10 @@
 				ENABLE_BITCODE = NO;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -8174,11 +8811,14 @@
 					/Users/winsonwu/Projects/ppsspp/ext/xxhash,
 					/Users/winsonwu/Projects/ppsspp/ext/snappy/.,
 					"/Users/winsonwu/Projects/ppsspp/ext/SPIRV-Cross-build/../SPIRV-Cross",
+					"$(BUILT_PRODUCTS_DIR)/**/**",
+					"$(SDKROOT)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "/Users/winsonwu/Projects/ppsspp/build-ios/CMakeFiles/PPSSPP.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LIBRARY_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",
@@ -8245,18 +8885,20 @@
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswresample.a,
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswscale.a,
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavutil.a,
+					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winsonstudio.pspplayer;
 				PRODUCT_NAME = PPSSPP;
-				PROVISIONING_PROFILE = "4b596f7c-150c-48aa-9cc6-e513eba9fbe3";
+				PROVISIONING_PROFILE = "b5850c6e-fecb-490c-ad69-2ca4cca7d095";
 				PROVISIONING_PROFILE_SPECIFIER = "PSP Player Ad Hoc";
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYMROOT = "/Users/winsonwu/Projects/ppsspp/build-ios";
-				SYSTEM_HEADER_SEARCH_PATHS = /Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include;
+				SYSTEM_HEADER_SEARCH_PATHS = "/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include $(BUILT_PRODUCTS_DIR)/**";
 				TARGETED_DEVICE_FAMILY = iPhone/iPad;
 				USE_HEADERMAP = NO;
+				VALID_ARCHS = arm64;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -8538,10 +9180,8 @@
 		32C64F0BE1A84D10B3CB39AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7,
-					arm64,
-				);
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -8551,6 +9191,10 @@
 				ENABLE_BITCODE = NO;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(BUILT_PRODUCTS_DIR)/**",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -8578,12 +9222,15 @@
 					/Users/winsonwu/Projects/ppsspp/ext/xxhash,
 					/Users/winsonwu/Projects/ppsspp/ext/snappy/.,
 					"/Users/winsonwu/Projects/ppsspp/ext/SPIRV-Cross-build/../SPIRV-Cross",
+					"$(BUILT_PRODUCTS_DIR)/**/**",
+					"$(SDKROOT)/usr/include/libxml2/**",
 				);
 				INFOPLIST_FILE = "/Users/winsonwu/Projects/ppsspp/build-ios/CMakeFiles/PPSSPP.dir/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LIBRARY_SEARCH_PATHS = "";
-				ONLY_ACTIVE_ARCH = NO;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-stdlib=libc++",
 					"-mios-version-min=6.0",
@@ -8648,6 +9295,7 @@
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswresample.a,
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswscale.a,
 					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavutil.a,
+					"$(inherited)",
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.winsonstudio.pspplayer;
@@ -8657,9 +9305,10 @@
 				SECTORDER_FLAGS = "";
 				SKIP_INSTALL = NO;
 				SYMROOT = "/Users/winsonwu/Projects/ppsspp/build-ios";
-				SYSTEM_HEADER_SEARCH_PATHS = /Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include;
+				SYSTEM_HEADER_SEARCH_PATHS = "/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include $(BUILT_PRODUCTS_DIR)/**";
 				TARGETED_DEVICE_FAMILY = iPhone/iPad;
 				USE_HEADERMAP = NO;
+				VALID_ARCHS = arm64;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -12010,6 +12659,279 @@
 			};
 			name = Debug;
 		};
+		F58CE937205BDBDC00C06958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9R98LWX53K;
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'GL_ETC1_RGB8_OES=0'",
+					__STDC_CONSTANT_MACROS,
+					NO_VULKAN,
+					USING_GLES2,
+					MOBILE_DEVICE,
+					SHARED_ZLIB,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/winsonwu/Projects/ppsspp/ext/native,
+					/Users/winsonwu/Projects/ppsspp,
+					/Users/winsonwu/Projects/ppsspp/Common,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext/rg_etc1,
+					/Users/winsonwu/Projects/ppsspp/ext/cityhash,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext/libzip,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext,
+					/Users/winsonwu/Projects/ppsspp/ext/libkirk,
+					/Users/winsonwu/Projects/ppsspp/ext/sfmt19937,
+					/Users/winsonwu/Projects/ppsspp/ext/xbrz,
+					/Users/winsonwu/Projects/ppsspp/ext/xxhash,
+					/Users/winsonwu/Projects/ppsspp/ext/snappy/.,
+					"/Users/winsonwu/Projects/ppsspp/ext/SPIRV-Cross-build/../SPIRV-Cross",
+					"$(BUILT_PRODUCTS_DIR)/**/**",
+				);
+				INFOPLIST_FILE = "PPSSPP copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-stdlib=libc++",
+					"-mios-version-min=6.0",
+					"-D_DEBUG",
+					"-include",
+					"'/Users/winsonwu/Projects/ppsspp/ppsspp_config.h'",
+					"'-std=gnu++11'",
+					"-U__STRICT_ANSI__",
+					"-Wno-multichar",
+					"-Wno-deprecated-register",
+					"-fno-strict-aliasing",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-headerpad_max_install_names",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libCore.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libCommon.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libsnappy.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libnative.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/liblibzip.a",
+					/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/usr/lib/libz.tbd,
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libpng17.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/librg_etc1.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libvjson.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libudis86.a",
+					"-framework",
+					Foundation,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					UIKit,
+					"-framework",
+					GLKit,
+					"-framework",
+					OpenAL,
+					"-framework",
+					AVFoundation,
+					"-weak_framework",
+					GameController,
+					"-liconv",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libkirk.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libcityhash.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libsfmt19937.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libxbrz.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libxxhash.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libSPIRV.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libglslang.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libOGLCompiler.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libOSDependent.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libHLSL.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libSPVRemapper.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libspirv-cross-glsl.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libspirv-cross-core.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Debug/libarmips.a",
+					"-framework",
+					OpenGLES,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavformat.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavcodec.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswresample.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswscale.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavutil.a,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.winsonstudio.pspplayer.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYMROOT = "/Users/winsonwu/Projects/ppsspp/build-ios";
+				SYSTEM_HEADER_SEARCH_PATHS = "/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include $(BUILT_PRODUCTS_DIR)/**";
+				TARGETED_DEVICE_FAMILY = iPhone/iPad;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		F58CE938205BDBDC00C06958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9R98LWX53K;
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'GL_ETC1_RGB8_OES=0'",
+					__STDC_CONSTANT_MACROS,
+					NO_VULKAN,
+					USING_GLES2,
+					MOBILE_DEVICE,
+					SHARED_ZLIB,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/winsonwu/Projects/ppsspp/ext/native,
+					/Users/winsonwu/Projects/ppsspp,
+					/Users/winsonwu/Projects/ppsspp/Common,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext/rg_etc1,
+					/Users/winsonwu/Projects/ppsspp/ext/cityhash,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext/libzip,
+					/Users/winsonwu/Projects/ppsspp/ext/native/ext,
+					/Users/winsonwu/Projects/ppsspp/ext/libkirk,
+					/Users/winsonwu/Projects/ppsspp/ext/sfmt19937,
+					/Users/winsonwu/Projects/ppsspp/ext/xbrz,
+					/Users/winsonwu/Projects/ppsspp/ext/xxhash,
+					/Users/winsonwu/Projects/ppsspp/ext/snappy/.,
+					"/Users/winsonwu/Projects/ppsspp/ext/SPIRV-Cross-build/../SPIRV-Cross",
+					"$(BUILT_PRODUCTS_DIR)/**/**",
+				);
+				INFOPLIST_FILE = "PPSSPP copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-stdlib=libc++",
+					"-mios-version-min=6.0",
+					"-DNDEBUG",
+					"-D_NDEBUG",
+					"-include",
+					"'/Users/winsonwu/Projects/ppsspp/ppsspp_config.h'",
+					"'-std=gnu++11'",
+					"-U__STRICT_ANSI__",
+					"-Wno-multichar",
+					"-Wno-deprecated-register",
+					"-fno-strict-aliasing",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-headerpad_max_install_names",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libCore.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libCommon.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libsnappy.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libnative.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/liblibzip.a",
+					/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/usr/lib/libz.tbd,
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libpng17.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/librg_etc1.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libvjson.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libudis86.a",
+					"-framework",
+					Foundation,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					CoreGraphics,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					UIKit,
+					"-framework",
+					GLKit,
+					"-framework",
+					OpenAL,
+					"-framework",
+					AVFoundation,
+					"-weak_framework",
+					GameController,
+					"-liconv",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libkirk.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libcityhash.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libsfmt19937.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libxbrz.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libxxhash.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libSPIRV.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libglslang.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libOGLCompiler.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libOSDependent.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libHLSL.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libSPVRemapper.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libspirv-cross-glsl.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libspirv-cross-core.a",
+					"/Users/winsonwu/Projects/ppsspp/build-ios/lib/Release/libarmips.a",
+					"-framework",
+					OpenGLES,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavformat.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavcodec.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswresample.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libswscale.a,
+					/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/lib/libavutil.a,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.winsonstudio.pspplayer.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				SYMROOT = "/Users/winsonwu/Projects/ppsspp/build-ios";
+				SYSTEM_HEADER_SEARCH_PATHS = "/Users/winsonwu/Projects/ppsspp/ffmpeg/ios/universal/include $(BUILT_PRODUCTS_DIR)/**";
+				TARGETED_DEVICE_FAMILY = iPhone/iPad;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
 		F678D0E79271413EA759A127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -12709,6 +13631,15 @@
 			buildConfigurations = (
 				594A060E10D7408FBE795A6B /* Debug */,
 				D3E986B8E5174B4D96FE7EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F58CE936205BDBDC00C06958 /* Build configuration list for PBXNativeTarget "PPSSPP Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58CE937205BDBDC00C06958 /* Debug */,
+				F58CE938205BDBDC00C06958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -5,6 +5,9 @@
 #import "Core/Config.h"
 #import "Common/Log.h"
 #import <AVFoundation/AVFoundation.h>
+#import "GCDWebServer/GCDWebUploader.h"
+
+#import "Util/WebFileManager.h"
 
 @implementation AppDelegate
 
@@ -71,9 +74,20 @@
 }
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.viewController = [[ViewController alloc] init];
 	
+    util::WebFileManager &manager=util::WebFileManager::Instance();
+    
+    manager.Start();
+    const char* str=manager.GetUrl();
+    
+    NSString* serverUrl = [NSString stringWithUTF8String:str];
+    NSLog(@"Visit %@ in your web browser", serverUrl);
+    
+    
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAudioSessionInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleMediaServicesWereReset:) name:AVAudioSessionMediaServicesWereResetNotification object:nil];
@@ -81,11 +95,6 @@
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];
 	
-    NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    //_webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
-    //[_webUploader start];
-    //NSLog(@"Visit %@ in your web browser", _webUploader.serverURL);
-    
 	return YES;
 }
 

@@ -730,6 +730,8 @@
 		F5431DE0205D7CE7005B9A0C /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6B1205D0906003B6975 /* GCDWebServerURLEncodedFormRequest.m */; };
 		F5431DE1205D7CEC005B9A0C /* GCDWebUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6AF205D0905003B6975 /* GCDWebUploader.m */; };
 		F5431DE5205D9697005B9A0C /* ShareInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5431DE2205D9138005B9A0C /* ShareInfo.cpp */; };
+		F5611485205EB95B0011B980 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F5611484205EB95A0011B980 /* Reachability.m */; };
+		F5611487205EBCA00011B980 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5611486205EBCA00011B980 /* SystemConfiguration.framework */; };
 		F58CE912205BDBDC00C06958 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE30F2A77444818B4DEA0BB /* Launch Screen.storyboard */; };
 		F58CE914205BDBDC00C06958 /* BackgroundAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E699ED5D0C44C208F6DDD6A /* BackgroundAudio.cpp */; };
 		F58CE915205BDBDC00C06958 /* ComboKeyMappingScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC968ACD8FB345E2889A55BE /* ComboKeyMappingScreen.cpp */; };
@@ -3050,6 +3052,9 @@
 		F5431DE2205D9138005B9A0C /* ShareInfo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = ShareInfo.cpp; path = Util/ShareInfo.cpp; sourceTree = SOURCE_ROOT; };
 		F5431DE3205D9138005B9A0C /* ShareInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareInfo.h; path = Util/ShareInfo.h; sourceTree = SOURCE_ROOT; };
 		F5431DE6205DAABC005B9A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "build-ios/CMakeFiles/PPSSPP.dir/Info.plist"; sourceTree = "<group>"; };
+		F5611483205EB95A0011B980 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ios/Reachability.h; sourceTree = "<group>"; };
+		F5611484205EB95A0011B980 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ios/Reachability.m; sourceTree = "<group>"; };
+		F5611486205EBCA00011B980 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F58CE939205BDBDC00C06958 /* PPSSPP Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPSSPP Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58CE93B205BE41C00C06958 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F58CE93D205BE42400C06958 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -3151,6 +3156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5611487205EBCA00011B980 /* SystemConfiguration.framework in Frameworks */,
 				F58CE944205BE44300C06958 /* libxml2.tbd in Frameworks */,
 				F58CE942205BE43400C06958 /* libz.tbd in Frameworks */,
 				F58CE940205BE42D00C06958 /* MobileCoreServices.framework in Frameworks */,
@@ -3714,6 +3720,8 @@
 		2AAE3A6E6A0A4F1DBED2398B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				F5611483205EB95A0011B980 /* Reachability.h */,
+				F5611484205EB95A0011B980 /* Reachability.m */,
 				F5431DE6205DAABC005B9A0C /* Info.plist */,
 				F5E2C65D205C259F003B6975 /* GCDWebServer */,
 				6685CFEDF7F84238AE2174DF /* iCade */,
@@ -5866,6 +5874,7 @@
 		F58CE8DC205BD7F800C06958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5611486205EBCA00011B980 /* SystemConfiguration.framework */,
 				F58CE943205BE44200C06958 /* libxml2.tbd */,
 				F58CE941205BE43400C06958 /* libz.tbd */,
 				F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */,
@@ -7361,6 +7370,7 @@
 				049106C84AB2435183A36B91 /* TouchControlVisibilityScreen.cpp in Sources */,
 				7E8B8970882E412C9FBE6CB0 /* ui_atlas.cpp in Sources */,
 				CB42154522994DE1BB222B65 /* TestRunner.cpp in Sources */,
+				F5611485205EB95B0011B980 /* Reachability.m in Sources */,
 				F5431DE5205D9697005B9A0C /* ShareInfo.cpp in Sources */,
 				F5431DD9205D7CCF005B9A0C /* GCDWebServerFileRequest.m in Sources */,
 				F5431DDA205D7CD3005B9A0C /* GCDWebServerFileResponse.m in Sources */,

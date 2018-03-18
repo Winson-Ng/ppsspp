@@ -158,16 +158,18 @@ function _reload(path) {
     
     $(".button-delete").click(function(event) {
       var path = $(this).parent().parent().data("path");
-      $.ajax({
-        url: 'delete',
-        type: 'POST',
-        data: {path: path},
-        dataType: 'json'
-      }).fail(function(jqXHR, textStatus, errorThrown) {
-        _showError("Failed deleting \"" + path + "\"", textStatus, errorThrown);
-      }).always(function() {
-        _reload(_path);
-      });
+      if(confirm("Are you sure you wish to delete: " + path + "?")){
+          $.ajax({
+                 url: 'delete',
+                 type: 'POST',
+                 data: {path: path},
+                 dataType: 'json'
+                 }).fail(function(jqXHR, textStatus, errorThrown) {
+                   _showError("Failed deleting \"" + path + "\"", textStatus, errorThrown);
+                 }).always(function() {
+                   _reload(_path);
+                 });
+      }
     });
     
     $(document).scrollTop(scrollPosition);

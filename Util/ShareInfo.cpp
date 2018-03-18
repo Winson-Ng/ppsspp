@@ -31,4 +31,10 @@ namespace util {
         TStrStrMap[key]=value;
     }
     
+    WebFileManager* ShareInfo::GetWebFileManager(){
+        return this->_webFileManager;
+    }
+    void ShareInfo::SetWebFileManager(WebFileManager *_webFileManager){
+        this->_webFileManager=_webFileManager;
+    }
 }

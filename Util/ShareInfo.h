@@ -11,16 +11,20 @@
 #include <stdio.h>
 #include <string>
 #include <map>
+#import "WebFileManager.h"
 
 namespace util {
     class ShareInfo {
     public:
         static ShareInfo& Instance();
-        virtual std::string Get(std::string key);
-        virtual void Set(std::string key, std::string value);
+        std::string Get(std::string key);
+        void Set(std::string key, std::string value);
+        WebFileManager* GetWebFileManager();
+        void SetWebFileManager(WebFileManager *webFileManager);
     private:
         ShareInfo();
         std::map<std::string, std::string> TStrStrMap;
+        WebFileManager *_webFileManager;
     };
 }
 #endif /* ShareInfo_hpp */

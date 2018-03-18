@@ -712,7 +712,7 @@
 		F429EFA1FB5A4304B04D0EB0 /* CompLoadStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D66728DB8E4CDFA11984B8 /* CompLoadStore.cpp */; };
 		F48DA35BACDE457789EACE78 /* zip_get_archive_comment.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC820FD97549439FDF724F /* zip_get_archive_comment.c */; };
 		F4FFE592F337493688191CB7 /* sceUsbGps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEA20BCE70CD4DCA84C9FBEF /* sceUsbGps.cpp */; };
-		F53FFF1C205D6905006EB7F8 /* WebFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */; };
+		F53FFF1C205D6905006EB7F8 /* GCDWebFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */; };
 		F5400BF3C3CE4D94A839944E /* sceCcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53CC983409947088472B4CF /* sceCcc.cpp */; };
 		F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C693205D08FF003B6975 /* GCDWebDAVServer.m */; };
 		F5431DD4205D7CBC005B9A0C /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6A3205D0902003B6975 /* GCDWebServer.m */; };
@@ -732,6 +732,7 @@
 		F5431DE5205D9697005B9A0C /* ShareInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5431DE2205D9138005B9A0C /* ShareInfo.cpp */; };
 		F5611485205EB95B0011B980 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F5611484205EB95A0011B980 /* Reachability.m */; };
 		F5611487205EBCA00011B980 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5611486205EBCA00011B980 /* SystemConfiguration.framework */; };
+		F561148A205ED8570011B980 /* WebFileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5611489205ED8570011B980 /* WebFileManager.cpp */; };
 		F58CE912205BDBDC00C06958 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE30F2A77444818B4DEA0BB /* Launch Screen.storyboard */; };
 		F58CE914205BDBDC00C06958 /* BackgroundAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E699ED5D0C44C208F6DDD6A /* BackgroundAudio.cpp */; };
 		F58CE915205BDBDC00C06958 /* ComboKeyMappingScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC968ACD8FB345E2889A55BE /* ComboKeyMappingScreen.cpp */; };
@@ -3047,7 +3048,7 @@
 		F4EB30D815A848818ECF9722 /* Pool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Pool.cpp; path = ext/armips/Archs/ARM/Pool.cpp; sourceTree = SOURCE_ROOT; };
 		F529D0D53B854C69B3B1D2F0 /* scePsmf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scePsmf.cpp; path = Core/HLE/scePsmf.cpp; sourceTree = SOURCE_ROOT; };
 		F534EC51D1104608BD9CF1E9 /* PSPPlaceholderDialog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PSPPlaceholderDialog.h; path = Core/Dialog/PSPPlaceholderDialog.h; sourceTree = SOURCE_ROOT; };
-		F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WebFileManager.mm; sourceTree = "<group>"; };
+		F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = GCDWebFileManager.mm; path = ios/GCDWebFileManager.mm; sourceTree = "<group>"; };
 		F53FFF1B205D6905006EB7F8 /* WebFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebFileManager.h; sourceTree = "<group>"; };
 		F5431DE2205D9138005B9A0C /* ShareInfo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = ShareInfo.cpp; path = Util/ShareInfo.cpp; sourceTree = SOURCE_ROOT; };
 		F5431DE3205D9138005B9A0C /* ShareInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareInfo.h; path = Util/ShareInfo.h; sourceTree = SOURCE_ROOT; };
@@ -3055,6 +3056,8 @@
 		F5611483205EB95A0011B980 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ios/Reachability.h; sourceTree = "<group>"; };
 		F5611484205EB95A0011B980 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ios/Reachability.m; sourceTree = "<group>"; };
 		F5611486205EBCA00011B980 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F5611488205ECA470011B980 /* GCDWebFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCDWebFileManager.h; path = ios/GCDWebFileManager.h; sourceTree = "<group>"; };
+		F5611489205ED8570011B980 /* WebFileManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WebFileManager.cpp; sourceTree = "<group>"; };
 		F58CE939205BDBDC00C06958 /* PPSSPP Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPSSPP Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58CE93B205BE41C00C06958 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F58CE93D205BE42400C06958 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -3720,6 +3723,8 @@
 		2AAE3A6E6A0A4F1DBED2398B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				F5611488205ECA470011B980 /* GCDWebFileManager.h */,
+				F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */,
 				F5611483205EB95A0011B980 /* Reachability.h */,
 				F5611484205EB95A0011B980 /* Reachability.m */,
 				F5431DE6205DAABC005B9A0C /* Info.plist */,
@@ -5864,7 +5869,7 @@
 			isa = PBXGroup;
 			children = (
 				F53FFF1B205D6905006EB7F8 /* WebFileManager.h */,
-				F53FFF1A205D6905006EB7F8 /* WebFileManager.mm */,
+				F5611489205ED8570011B980 /* WebFileManager.cpp */,
 				F5431DE2205D9138005B9A0C /* ShareInfo.cpp */,
 				F5431DE3205D9138005B9A0C /* ShareInfo.h */,
 			);
@@ -7341,6 +7346,7 @@
 				F5431DE0205D7CE7005B9A0C /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				4BD9D64ED1334008BA8E37ED /* GameSettingsScreen.cpp in Sources */,
 				F0153DF9E7484AC7900CA5B8 /* GamepadEmu.cpp in Sources */,
+				F561148A205ED8570011B980 /* WebFileManager.cpp in Sources */,
 				F5431DDE205D7CE0005B9A0C /* GCDWebServerResponse.m in Sources */,
 				A62BBAA0B7BB401F85B11FC9 /* InstallZipScreen.cpp in Sources */,
 				F92451F1D12E42A8BE20C9EE /* MainScreen.cpp in Sources */,
@@ -7349,7 +7355,7 @@
 				C9A6B86F64D7410BBCD7E6C2 /* OnScreenDisplay.cpp in Sources */,
 				E0F985EE1E334057BF0B5633 /* PauseScreen.cpp in Sources */,
 				3E06CC7FBFE44425AE2B8BEC /* ProfilerDraw.cpp in Sources */,
-				F53FFF1C205D6905006EB7F8 /* WebFileManager.mm in Sources */,
+				F53FFF1C205D6905006EB7F8 /* GCDWebFileManager.mm in Sources */,
 				F5431DE1205D7CEC005B9A0C /* GCDWebUploader.m in Sources */,
 				F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */,
 				F5431DD5205D7CC1005B9A0C /* GCDWebServerConnection.m in Sources */,

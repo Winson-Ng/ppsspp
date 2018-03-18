@@ -9,44 +9,40 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 
-#import "WebFileManager.h"
+#import "Util/WebFileManager.h"
+#import "GCDWebFileManager.h"
 
 #include <string>
 #import "GCDWebServer/GCDWebUploader.h"
 
-#include "ShareInfo.h"
+//#include "ShareInfo.h"
 
 #import "ios/Reachability.h"
 
-namespace util {
-    WebFileManager& WebFileManager::Instance(){
-        static WebFileManager instance;
-        return instance;
-    }
     
-    WebFileManager::WebFileManager(){
+GCDWebFileManager::GCDWebFileManager():util::WebFileManager(){
         NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
         _webUploader = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
-        
+        _reachability = [Reachability reachabilityForInternetConnection];
     }
     
-    const char* WebFileManager::GetUrl(){
+    std::string GCDWebFileManager::GetUrl(){
+        
         if([_webUploader isRunning]){
             NSString *url=[[_webUploader serverURL] absoluteString];
-            return [url UTF8String];
+            return std::string([url UTF8String]);
+        }else if([_reachability currentReachabilityStatus] != ReachableViaWiFi){
+            return "Please connect WIFI and restart app!";
         }else{
-            return "WebServer not running";
+            return "WebServer not running, please restart app!";
         }
     }
     
-    void WebFileManager::Start(){
+    void GCDWebFileManager::Start(){
         
+        [_reachability startNotifier];
         
-        Reachability *reachability = [Reachability reachabilityForInternetConnection];
-
-        [reachability startNotifier];
-        
-        NetworkStatus status = [reachability currentReachabilityStatus];
+        NetworkStatus status = [_reachability currentReachabilityStatus];
         
         if (status == ReachableViaWiFi)
         {
@@ -60,15 +56,15 @@ namespace util {
                 }
             }
             
-            util::ShareInfo::Instance().Set("WebFileManagerUrl", this->GetUrl());
+           //util::ShareInfo::Instance().Set("WebFileManagerUrl", this->GetUrl());
         }
         else
         {
-           util::ShareInfo::Instance().Set("WebFileManagerUrl", "Please change to WIFI network!");
+           //util::ShareInfo::Instance().Set("WebFileManagerUrl", "Please change to WIFI network!");
         }
         
     }
-    void WebFileManager::Stop(){
+    void GCDWebFileManager::Stop(){
         [_webUploader stop];
     }
-}
+

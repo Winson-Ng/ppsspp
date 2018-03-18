@@ -75,6 +75,7 @@
 #include <sstream>
 
 #include "Util/ShareInfo.h"
+#import "Util/WebFileManager.h"
 
 bool MainScreen::showHomebrewTab = false;
 
@@ -834,7 +835,8 @@ void MainScreen::CreateViews() {
 	}
     
     
-    leftColumn->Add(new TextView(mm->T("WebFileManager: " + util::ShareInfo::Instance().Get("WebFileManagerUrl")), ALIGN_HCENTER, false));
+    
+    leftColumn->Add(new TextView(mm->T("WebFileManager: " + util::ShareInfo::Instance().GetWebFileManager()->GetUrl()), ALIGN_HCENTER, false));
 
     
     

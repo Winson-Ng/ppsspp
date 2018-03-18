@@ -7,7 +7,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "GCDWebServer/GCDWebUploader.h"
 
-#import "Util/WebFileManager.h"
+#import "GCDWebFileManager.h"
+#import "Util/ShareInfo.h"
 
 @implementation AppDelegate
 
@@ -78,13 +79,20 @@
     
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.viewController = [[ViewController alloc] init];
-	
-    util::WebFileManager &manager=util::WebFileManager::Instance();
     
-    manager.Start();
-    const char* str=manager.GetUrl();
     
-    NSString* serverUrl = [NSString stringWithUTF8String:str];
+    GCDWebFileManager *manager=new GCDWebFileManager();
+    
+    
+    util::ShareInfo::Instance().SetWebFileManager(manager);
+    
+    
+    manager->Start();
+    
+    
+    std::string str=manager->GetUrl();
+    
+    NSString* serverUrl = [NSString stringWithUTF8String:str.c_str()];
     NSLog(@"Visit %@ in your web browser", serverUrl);
     
     

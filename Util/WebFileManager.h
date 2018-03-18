@@ -10,18 +10,14 @@
 
 #include <stdio.h>
 #include <string>
-#import "GCDWebServer/GCDWebUploader.h"
 
 namespace util {
     class WebFileManager {
         public:
-            static WebFileManager& Instance();
-            virtual const char* GetUrl();
+            virtual std::string GetUrl();
             virtual void Start();
             virtual void Stop();
-        private:
             WebFileManager();
-            GCDWebUploader *_webUploader;
     };
 }
 #endif /* WebFileManager_hpp */

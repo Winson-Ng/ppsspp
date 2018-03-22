@@ -16,6 +16,11 @@ namespace util {
     std::string WebFileManager::GetUrl(){
         return nullptr;
     }
+    
+    bool WebFileManager::IsRunning(){
+        return false;
+    }
     void WebFileManager::Start(){}
     void WebFileManager::Stop(){}
+    void WebFileManager::ShowView(){}
 }

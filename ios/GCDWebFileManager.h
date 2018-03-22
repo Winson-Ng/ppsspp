@@ -21,6 +21,8 @@ class GCDWebFileManager : public util::WebFileManager
         std::string GetUrl();
         void Start();
         void Stop();
+        bool IsRunning();
+        void ShowView();
     private:
         GCDWebUploader *_webUploader;
         Reachability *_reachability;

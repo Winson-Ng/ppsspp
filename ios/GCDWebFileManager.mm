@@ -14,10 +14,29 @@
 
 #include <string>
 #import "GCDWebServer/GCDWebUploader.h"
+#import "TableViewCells/FileManagerTableViewController.h"
+
 
 //#include "ShareInfo.h"
 
 #import "ios/Reachability.h"
+
+@interface ViewControllerHelper : NSObject
++(UIViewController *)currentViewController;
+@end
+
+@implementation ViewControllerHelper
++(UIViewController *)currentViewController
+{
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    
+    return topController;
+}
+@end;
 
     
 GCDWebFileManager::GCDWebFileManager():util::WebFileManager(){
@@ -37,7 +56,9 @@ GCDWebFileManager::GCDWebFileManager():util::WebFileManager(){
             return "WebServer not running, please restart app!";
         }
     }
-    
+    bool GCDWebFileManager::IsRunning(){
+        return [_webUploader isRunning];
+    }
     void GCDWebFileManager::Start(){
         
         [_reachability startNotifier];
@@ -66,5 +87,17 @@ GCDWebFileManager::GCDWebFileManager():util::WebFileManager(){
     }
     void GCDWebFileManager::Stop(){
         [_webUploader stop];
+    }
+
+    void GCDWebFileManager::ShowView()
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //回调或者说是通知主线程刷新，
+            FileManagerTableViewController *view=[[FileManagerTableViewController alloc] init];
+            UIViewController *topController =[ViewControllerHelper currentViewController];
+            [topController presentViewController:view animated:true completion:^(){
+                
+            }];
+        });
     }
 

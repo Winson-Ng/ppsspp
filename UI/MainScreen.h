@@ -97,6 +97,7 @@ protected:
 	UI::EventReturn OnGameSettings(UI::EventParams &e);
 	UI::EventReturn OnRecentChange(UI::EventParams &e);
 	UI::EventReturn OnCredits(UI::EventParams &e);
+    UI::EventReturn OnWebFileManager(UI::EventParams &e);
 	UI::EventReturn OnSupport(UI::EventParams &e);
 	UI::EventReturn OnPPSSPPOrg(UI::EventParams &e);
 	UI::EventReturn OnForums(UI::EventParams &e);

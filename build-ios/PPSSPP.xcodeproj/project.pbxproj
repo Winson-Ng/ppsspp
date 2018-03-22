@@ -769,9 +769,11 @@
 		F58CE940205BE42D00C06958 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */; };
 		F58CE942205BE43400C06958 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE941205BE43400C06958 /* libz.tbd */; };
 		F58CE944205BE44300C06958 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F58CE943205BE44200C06958 /* libxml2.tbd */; };
+		F59CF6BA20614927002DF589 /* FileManagerTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */; };
+		F59CF6BB20614927002DF589 /* FileManagerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */; };
+		F59CF6BF20614988002DF589 /* FileManagerTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */; };
+		F59CF6C020614988002DF589 /* FileManagerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */; };
 		F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5E2C69C205D0901003B6975 /* GCDWebUploader.bundle */; };
-		F5E2C6C3205D353A003B6975 /* FileManagerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E2C6C2205D353A003B6975 /* FileManagerView.xib */; };
-		F5E2C6C6205D35B6003B6975 /* FileManagerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */; };
 		F60DF44324C847E9B7FA28F3 /* Pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4EB30D815A848818ECF9722 /* Pool.cpp */; };
 		F6A5C502BF5742D79E1470EA /* RetryingFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B247221A72413D82700A17 /* RetryingFileLoader.cpp */; };
 		F6B0B77FCA34492C89D0EA54 /* Arm64CompALU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D7FA7987D5A442BAD52C579 /* Arm64CompALU.cpp */; };
@@ -3064,6 +3066,12 @@
 		F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F58CE941205BE43400C06958 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F58CE943205BE44200C06958 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		F59CF6B720614927002DF589 /* FileManagerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewController.h; path = ios/TableViewCells/FileManagerTableViewController.h; sourceTree = SOURCE_ROOT; };
+		F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewController.mm; path = ios/TableViewCells/FileManagerTableViewController.mm; sourceTree = SOURCE_ROOT; };
+		F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerTableViewController.xib; path = ios/TableViewCells/FileManagerTableViewController.xib; sourceTree = SOURCE_ROOT; };
+		F59CF6BC20614988002DF589 /* FileManagerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewCell.h; path = ios/TableViewCells/FileManagerTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewCell.mm; path = ios/TableViewCells/FileManagerTableViewCell.mm; sourceTree = SOURCE_ROOT; };
+		F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerTableViewCell.xib; path = ios/TableViewCells/FileManagerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		F5AE9082A76D4818B78F04CC /* AsyncIOManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AsyncIOManager.h; path = Core/HW/AsyncIOManager.h; sourceTree = SOURCE_ROOT; };
 		F5E2C690205D08FF003B6975 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/GCDWebServerConnection.h; sourceTree = SOURCE_ROOT; };
 		F5E2C691205D08FF003B6975 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = GCDWebServer/GCDWebServerDataRequest.h; sourceTree = SOURCE_ROOT; };
@@ -3099,9 +3107,6 @@
 		F5E2C6AF205D0905003B6975 /* GCDWebUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebUploader.m; path = GCDWebServer/GCDWebUploader.m; sourceTree = SOURCE_ROOT; };
 		F5E2C6B0205D0906003B6975 /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerErrorResponse.h; path = GCDWebServer/GCDWebServerErrorResponse.h; sourceTree = SOURCE_ROOT; };
 		F5E2C6B1205D0906003B6975 /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerURLEncodedFormRequest.m; path = GCDWebServer/GCDWebServerURLEncodedFormRequest.m; sourceTree = SOURCE_ROOT; };
-		F5E2C6C2205D353A003B6975 /* FileManagerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerView.xib; path = ios/FileManagerView.xib; sourceTree = "<group>"; };
-		F5E2C6C4205D357D003B6975 /* FileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerViewController.h; path = ios/FileManagerViewController.h; sourceTree = "<group>"; };
-		F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FileManagerViewController.mm; path = ios/FileManagerViewController.mm; sourceTree = "<group>"; };
 		F5E54AA6A40C4B1D9946AC1D /* zip_rename.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zip_rename.c; path = ext/native/ext/libzip/zip_rename.c; sourceTree = SOURCE_ROOT; };
 		F5F7361294084A8A992F03E9 /* MIPSVFPUUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MIPSVFPUUtils.h; path = Core/MIPS/MIPSVFPUUtils.h; sourceTree = SOURCE_ROOT; };
 		F603AFDF014B46C599C20987 /* TextureScalerGLES.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TextureScalerGLES.cpp; path = GPU/GLES/TextureScalerGLES.cpp; sourceTree = SOURCE_ROOT; };
@@ -3723,6 +3728,7 @@
 		2AAE3A6E6A0A4F1DBED2398B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				F59CF6B220614789002DF589 /* TableViewCells */,
 				F5611488205ECA470011B980 /* GCDWebFileManager.h */,
 				F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */,
 				F5611483205EB95A0011B980 /* Reachability.h */,
@@ -3741,9 +3747,6 @@
 				4E7C1C01345B4B0D99BB9EDA /* iOSCoreAudio.h */,
 				4A417F77BCB24A988685780E /* iOSCoreAudio.mm */,
 				68B5F4E42ABD4E7B8C6D0FF6 /* main.mm */,
-				F5E2C6C2205D353A003B6975 /* FileManagerView.xib */,
-				F5E2C6C4205D357D003B6975 /* FileManagerViewController.h */,
-				F5E2C6C5205D35B6003B6975 /* FileManagerViewController.mm */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -5889,6 +5892,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F59CF6B220614789002DF589 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F59CF6B720614927002DF589 /* FileManagerTableViewController.h */,
+				F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */,
+				F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */,
+				F59CF6BC20614988002DF589 /* FileManagerTableViewCell.h */,
+				F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */,
+				F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		F5E2C65D205C259F003B6975 /* GCDWebServer */ = {
 			isa = PBXGroup;
 			children = (
@@ -6641,6 +6657,29 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				el,
+				"zh-Hans",
+				ja,
+				uk,
+				nb,
+				es,
+				it,
+				sv,
+				Base,
+				"zh-Hant",
+				hu,
+				tr,
+				pl,
+				"es-MX",
+				ru,
+				fr,
+				nl,
+				th,
+				pt,
+				"pt-PT",
+				hr,
+				ca,
 			);
 			mainGroup = 1D71F2DC7FBC4CCFB51CFF01;
 			projectDirPath = ../;
@@ -6693,9 +6732,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E2C6C3205D353A003B6975 /* FileManagerView.xib in Resources */,
+				F59CF6BB20614927002DF589 /* FileManagerTableViewController.xib in Resources */,
 				5C432F84A9604219A7C6F574 /* Launch Screen.storyboard in Resources */,
 				F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */,
+				F59CF6C020614988002DF589 /* FileManagerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7342,19 +7382,20 @@
 				7D4454927F194A7EAD0DFA53 /* EmuScreen.cpp in Sources */,
 				2BCA81DCDE3441DC81F7254A /* GameInfoCache.cpp in Sources */,
 				8C4308B3B860453A92608B71 /* GameScreen.cpp in Sources */,
-				F5E2C6C6205D35B6003B6975 /* FileManagerViewController.mm in Sources */,
 				F5431DE0205D7CE7005B9A0C /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				4BD9D64ED1334008BA8E37ED /* GameSettingsScreen.cpp in Sources */,
 				F0153DF9E7484AC7900CA5B8 /* GamepadEmu.cpp in Sources */,
 				F561148A205ED8570011B980 /* WebFileManager.cpp in Sources */,
 				F5431DDE205D7CE0005B9A0C /* GCDWebServerResponse.m in Sources */,
 				A62BBAA0B7BB401F85B11FC9 /* InstallZipScreen.cpp in Sources */,
+				F59CF6BA20614927002DF589 /* FileManagerTableViewController.mm in Sources */,
 				F92451F1D12E42A8BE20C9EE /* MainScreen.cpp in Sources */,
 				BCAF924CBDDF4409AD2CD38E /* MiscScreens.cpp in Sources */,
 				4FCD96E1CD0640C2859D6F36 /* NativeApp.cpp in Sources */,
 				C9A6B86F64D7410BBCD7E6C2 /* OnScreenDisplay.cpp in Sources */,
 				E0F985EE1E334057BF0B5633 /* PauseScreen.cpp in Sources */,
 				3E06CC7FBFE44425AE2B8BEC /* ProfilerDraw.cpp in Sources */,
+				F59CF6BF20614988002DF589 /* FileManagerTableViewCell.mm in Sources */,
 				F53FFF1C205D6905006EB7F8 /* GCDWebFileManager.mm in Sources */,
 				F5431DE1205D7CEC005B9A0C /* GCDWebUploader.m in Sources */,
 				F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */,

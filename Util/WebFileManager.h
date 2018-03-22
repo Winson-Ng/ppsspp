@@ -17,6 +17,8 @@ namespace util {
             virtual std::string GetUrl();
             virtual void Start();
             virtual void Stop();
+            virtual bool IsRunning();
+            virtual void ShowView();
             WebFileManager();
     };
 }

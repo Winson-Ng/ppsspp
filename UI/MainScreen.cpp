@@ -864,12 +864,15 @@ void MainScreen::CreateViews() {
 #endif
 	rightColumnItems->Add(new Choice(mm->T("Game Settings", "Settings")))->OnClick.Handle(this, &MainScreen::OnGameSettings);
 	rightColumnItems->Add(new Choice(mm->T("Credits")))->OnClick.Handle(this, &MainScreen::OnCredits);
-	rightColumnItems->Add(new Choice(mm->T("www.ppsspp.org")))->OnClick.Handle(this, &MainScreen::OnPPSSPPOrg);
-	if (!System_GetPropertyBool(SYSPROP_APP_GOLD)) {
-		Choice *gold = rightColumnItems->Add(new Choice(mm->T("Support PPSSPP")));
-		gold->OnClick.Handle(this, &MainScreen::OnSupport);
-		gold->SetIcon(I_ICONGOLD);
-	}
+	//rightColumnItems->Add(new Choice(mm->T("www.ppsspp.org")))->OnClick.Handle(this, &MainScreen::OnPPSSPPOrg);
+    
+    rightColumnItems->Add(new Choice(mm->T("WebFileManager")))->OnClick.Handle(this, &MainScreen::OnWebFileManager);
+    
+//    if (!System_GetPropertyBool(SYSPROP_APP_GOLD)) {
+//        Choice *gold = rightColumnItems->Add(new Choice(mm->T("Support PPSSPP")));
+//        gold->OnClick.Handle(this, &MainScreen::OnSupport);
+//        gold->SetIcon(I_ICONGOLD);
+//    }
 
 #if !PPSSPP_PLATFORM(UWP)
 	// Having an exit button is against UWP guidelines.
@@ -1121,6 +1124,12 @@ UI::EventReturn MainScreen::OnRecentChange(UI::EventParams &e) {
 UI::EventReturn MainScreen::OnCredits(UI::EventParams &e) {
 	screenManager()->push(new CreditsScreen());
 	return UI::EVENT_DONE;
+}
+
+UI::EventReturn MainScreen::OnWebFileManager(UI::EventParams &e) {
+    util::ShareInfo::Instance().GetWebFileManager()->ShowView();
+    //screenManager()->push(new CreditsScreen());
+    return UI::EVENT_DONE;
 }
 
 UI::EventReturn MainScreen::OnHomebrewStore(UI::EventParams &e) {

@@ -579,6 +579,7 @@ VkResult VulkanContext::CreateDevice() {
 		VulkanLoadDeviceFunctions(device_);
 	}
 	ILOG("Device created.\n");
+	VulkanSetAvailable(true);
 	return res;
 }
 
@@ -639,10 +640,13 @@ void VulkanContext::ReinitSurface(int width, int height) {
 		HINSTANCE connection = (HINSTANCE)winsysData1_;
 		HWND window = (HWND)winsysData2_;
 
-		RECT rc;
-		GetClientRect(window, &rc);
-		width = rc.right - rc.left;
-		height = rc.bottom - rc.top;
+		if (width < 0 || height < 0)
+		{
+			RECT rc;
+			GetClientRect(window, &rc);
+			width = rc.right - rc.left;
+			height = rc.bottom - rc.top;
+		}
 
 		VkWin32SurfaceCreateInfoKHR win32{ VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR };
 		win32.flags = 0;
@@ -937,17 +941,6 @@ void VulkanContext::DestroyDevice() {
 	device_ = nullptr;
 }
 
-VkPipelineCache VulkanContext::CreatePipelineCache() {
-	VkPipelineCache cache;
-	VkPipelineCacheCreateInfo pc{ VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO };
-	pc.pInitialData = nullptr;
-	pc.initialDataSize = 0;
-	pc.flags = 0;
-	VkResult res = vkCreatePipelineCache(device_, &pc, nullptr, &cache);
-	assert(VK_SUCCESS == res);
-	return cache;
-}
-
 bool VulkanContext::CreateShaderModule(const std::vector<uint32_t> &spirv, VkShaderModule *shaderModule) {
 	VkShaderModuleCreateInfo sm{ VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO };
 	sm.pCode = spirv.data();
@@ -965,6 +958,24 @@ void TransitionImageLayout2(VkCommandBuffer cmd, VkImage image, int baseMip, int
 	VkImageLayout oldImageLayout, VkImageLayout newImageLayout,
 	VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask,
 	VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask) {
+#ifdef VULKAN_USE_GENERAL_LAYOUT_FOR_COLOR
+	if (aspectMask == VK_IMAGE_ASPECT_COLOR_BIT) {
+		// Hack to disable transaction elimination on ARM Mali.
+		if (oldImageLayout == VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL || oldImageLayout == VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL)
+			oldImageLayout = VK_IMAGE_LAYOUT_GENERAL;
+		if (newImageLayout == VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL || newImageLayout == VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL)
+			newImageLayout = VK_IMAGE_LAYOUT_GENERAL;
+	}
+#endif
+#ifdef VULKAN_USE_GENERAL_LAYOUT_FOR_DEPTH_STENCIL
+	if (aspectMask != VK_IMAGE_ASPECT_COLOR_BIT) {
+		// Hack to disable transaction elimination on ARM Mali.
+		if (oldImageLayout == VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL || oldImageLayout == VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL)
+			oldImageLayout = VK_IMAGE_LAYOUT_GENERAL;
+		if (newImageLayout == VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL || newImageLayout == VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL)
+			newImageLayout = VK_IMAGE_LAYOUT_GENERAL;
+	}
+#endif
 	VkImageMemoryBarrier image_memory_barrier{ VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER };
 	image_memory_barrier.srcAccessMask = srcAccessMask;
 	image_memory_barrier.dstAccessMask = dstAccessMask;
@@ -1143,6 +1154,10 @@ void VulkanDeleteList::Take(VulkanDeleteList &del) {
 }
 
 void VulkanDeleteList::PerformDeletes(VkDevice device) {
+	for (auto &callback : callbacks_) {
+		callback.func(callback.userdata);
+	}
+	callbacks_.clear();
 	for (auto &cmdPool : cmdPools_) {
 		vkDestroyCommandPool(device, cmdPool, nullptr);
 	}
@@ -1203,8 +1218,4 @@ void VulkanDeleteList::PerformDeletes(VkDevice device) {
 		vkDestroyDescriptorSetLayout(device, descSetLayout, nullptr);
 	}
 	descSetLayouts_.clear();
-	for (auto &callback : callbacks_) {
-		callback.func(callback.userdata);
-	}
-	callbacks_.clear();
 }

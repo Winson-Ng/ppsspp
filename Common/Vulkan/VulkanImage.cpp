@@ -58,6 +58,12 @@ bool VulkanTexture::CreateDirect(VkCommandBuffer cmd, int w, int h, int numMips,
 		image_create_info.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
 	}
 
+	// The graphics debugger always "needs" TRANSFER_SRC but in practice doesn't matter - 
+	// unless validation is on. So let's only force it on when being validated, for now.
+	if (vulkan_->GetFlags() & VULKAN_FLAG_VALIDATE) {
+		image_create_info.usage |= VK_IMAGE_USAGE_TRANSFER_SRC_BIT;
+	}
+
 	VkResult res = vkCreateImage(vulkan_->GetDevice(), &image_create_info, NULL, &image_);
 	if (res != VK_SUCCESS) {
 		_assert_(res == VK_ERROR_OUT_OF_HOST_MEMORY || res == VK_ERROR_OUT_OF_DEVICE_MEMORY || res == VK_ERROR_TOO_MANY_OBJECTS);
@@ -106,7 +112,7 @@ bool VulkanTexture::CreateDirect(VkCommandBuffer cmd, int w, int h, int numMips,
 		case VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL:
 			TransitionImageLayout2(cmd, image_, 0, numMips, VK_IMAGE_ASPECT_COLOR_BIT,
 				VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
-				VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT,
+				VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT,
 				0, VK_ACCESS_TRANSFER_WRITE_BIT);
 			break;
 		default:

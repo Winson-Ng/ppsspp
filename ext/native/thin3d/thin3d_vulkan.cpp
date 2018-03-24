@@ -773,7 +773,9 @@ VKContext::VKContext(VulkanContext *vulkan, bool splitSubmit)
 	res = vkCreatePipelineLayout(device_, &pl, nullptr, &pipelineLayout_);
 	assert(VK_SUCCESS == res);
 
-	pipelineCache_ = vulkan_->CreatePipelineCache();
+	VkPipelineCacheCreateInfo pc{ VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO };
+	res = vkCreatePipelineCache(vulkan_->GetDevice(), &pc, nullptr, &pipelineCache_);
+	assert(VK_SUCCESS == res);
 
 	renderManager_.SetSplitSubmit(splitSubmit);
 
@@ -859,7 +861,11 @@ VkDescriptorSet VKContext::GetOrCreateDescriptorSet(VkBuffer buf) {
 	VkDescriptorImageInfo imageDesc;
 	imageDesc.imageView = boundTextures_[0]->GetImageView();
 	imageDesc.sampler = boundSamplers_[0]->GetSampler();
+#ifdef VULKAN_USE_GENERAL_LAYOUT_FOR_COLOR
+	imageDesc.imageLayout = VK_IMAGE_LAYOUT_GENERAL;
+#else
 	imageDesc.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+#endif
 
 	VkWriteDescriptorSet writes[2] = {};
 	writes[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;

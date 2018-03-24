@@ -255,9 +255,7 @@ void DrawEngineVulkan::BeginFrame() {
 	// TODO: How can we make this nicer...
 	((TessellationDataTransferVulkan *)tessDataTransfer)->SetPushBuffer(frame->pushUBO);
 
-	// TODO : Find a better place to do this.
 	if (!nullTexture_) {
-		ILOG("INIT : Creating null texture");
 		VkCommandBuffer cmdInit = (VkCommandBuffer)draw_->GetNativeObject(Draw::NativeObject::INIT_COMMANDBUFFER);
 		nullTexture_ = new VulkanTexture(vulkan_, textureCache_->GetAllocator());
 		int w = 8;
@@ -432,8 +430,11 @@ VkDescriptorSet DrawEngineVulkan::GetOrCreateDescriptorSet(VkImageView imageView
 	int n = 0;
 	VkDescriptorImageInfo tex[2]{};
 	if (imageView) {
-		// TODO: Also support LAYOUT_GENERAL to be able to texture from framebuffers without transitioning them?
+#ifdef VULKAN_USE_GENERAL_LAYOUT_FOR_COLOR
+		tex[0].imageLayout = VK_IMAGE_LAYOUT_GENERAL;
+#else
 		tex[0].imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+#endif
 		tex[0].imageView = imageView;
 		tex[0].sampler = sampler;
 		writes[n].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -447,8 +448,11 @@ VkDescriptorSet DrawEngineVulkan::GetOrCreateDescriptorSet(VkImageView imageView
 	}
 
 	if (boundSecondary_) {
-		// TODO: Also support LAYOUT_GENERAL to be able to texture from framebuffers without transitioning them?
+#ifdef VULKAN_USE_GENERAL_LAYOUT_FOR_COLOR
+		tex[0].imageLayout = VK_IMAGE_LAYOUT_GENERAL;
+#else
 		tex[1].imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+#endif
 		tex[1].imageView = boundSecondary_;
 		tex[1].sampler = samplerSecondary_;
 		writes[n].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -770,19 +774,19 @@ void DrawEngineVulkan::DoFlush() {
 			Draw::NativeObject object = g_Config.iRenderingMode != 0 ? Draw::NativeObject::FRAMEBUFFER_RENDERPASS : Draw::NativeObject::BACKBUFFER_RENDERPASS;
 			VkRenderPass renderPass = (VkRenderPass)draw_->GetNativeObject(object);
 			VulkanPipeline *pipeline = pipelineManager_->GetOrCreatePipeline(pipelineLayout_, renderPass, pipelineKey_, &dec_->decFmt, vshader, fshader, true);
-			if (!pipeline) {
+			if (!pipeline || !pipeline->pipeline) {
 				// Already logged, let's bail out.
 				return;
 			}
 			BindShaderBlendTex();  // This might cause copies so important to do before BindPipeline.
 			renderManager->BindPipeline(pipeline->pipeline);
 			if (pipeline != lastPipeline_) {
-				if (lastPipeline_ && !lastPipeline_->useBlendConstant && pipeline->useBlendConstant) {
+				if (lastPipeline_ && !(lastPipeline_->UsesBlendConstant() && pipeline->UsesBlendConstant())) {
 					gstate_c.Dirty(DIRTY_BLEND_STATE);
 				}
 				lastPipeline_ = pipeline;
 			}
-			ApplyDrawStateLate(renderManager, false, 0, pipeline->useBlendConstant);
+			ApplyDrawStateLate(renderManager, false, 0, pipeline->UsesBlendConstant());
 			gstate_c.Clean(DIRTY_BLEND_STATE | DIRTY_DEPTHSTENCIL_STATE | DIRTY_RASTER_STATE | DIRTY_VIEWPORTSCISSOR_STATE);
 			lastPipeline_ = pipeline;
 
@@ -874,19 +878,19 @@ void DrawEngineVulkan::DoFlush() {
 				Draw::NativeObject object = g_Config.iRenderingMode != 0 ? Draw::NativeObject::FRAMEBUFFER_RENDERPASS : Draw::NativeObject::BACKBUFFER_RENDERPASS;
 				VkRenderPass renderPass = (VkRenderPass)draw_->GetNativeObject(object);
 				VulkanPipeline *pipeline = pipelineManager_->GetOrCreatePipeline(pipelineLayout_, renderPass, pipelineKey_, &dec_->decFmt, vshader, fshader, false);
-				if (!pipeline) {
+				if (!pipeline || !pipeline->pipeline) {
 					// Already logged, let's bail out.
 					return;
 				}
 				BindShaderBlendTex();  // This might cause copies so super important to do before BindPipeline.
 				renderManager->BindPipeline(pipeline->pipeline);
 				if (pipeline != lastPipeline_) {
-					if (lastPipeline_ && !lastPipeline_->useBlendConstant && pipeline->useBlendConstant) {
+					if (lastPipeline_ && !lastPipeline_->UsesBlendConstant() && pipeline->UsesBlendConstant()) {
 						gstate_c.Dirty(DIRTY_BLEND_STATE);
 					}
 					lastPipeline_ = pipeline;
 				}
-				ApplyDrawStateLate(renderManager, result.setStencil, result.stencilValue, pipeline->useBlendConstant);
+				ApplyDrawStateLate(renderManager, result.setStencil, result.stencilValue, pipeline->UsesBlendConstant());
 				gstate_c.Clean(DIRTY_BLEND_STATE | DIRTY_DEPTHSTENCIL_STATE | DIRTY_RASTER_STATE | DIRTY_VIEWPORTSCISSOR_STATE);
 				lastPipeline_ = pipeline;
 

@@ -8,6 +8,13 @@
 	<string>PPSSPP</string>
 	<key>CFBundleExecutable</key>
 	<string>PPSSPP</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>assets/Icon-72.png</string>
+		<string>assets/Icon-72@2x.png</string>
+		<string>assets/Icon.png</string>
+		<string>assets/Icon@2x.png</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,15 +24,24 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UILaunchImageFile</key>
+	<string>Default.png</string>
+	<key>UILaunchStoryboardName</key>
+	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -42,23 +58,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>assets/Icon-72.png</string>
-		<string>assets/Icon-72@2x.png</string>
-		<string>assets/Icon.png</string>
-		<string>assets/Icon@2x.png</string>
-	</array>
-	<key>UILaunchImageFile</key>
-	<string>Default.png</string>
-	<key>UIFileSharingEnabled</key>
-	<true/>
-	<key>UIDeviceFamily</key>
-	<array>
-		<integer>1</integer>
-		<integer>2</integer>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>Launch Screen</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

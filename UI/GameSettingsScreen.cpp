@@ -336,7 +336,7 @@ void GameSettingsScreen::CreateViews() {
 	});
 	beziersChoice->SetDisabledPtr(&g_Config.bHardwareTessellation);
 
-	CheckBox *tessellationHW = graphicsSettings->Add(new CheckBox(&g_Config.bHardwareTessellation, gr->T("Hardware Tessellation", "Hardware tessellation (experimental)")));
+	CheckBox *tessellationHW = graphicsSettings->Add(new CheckBox(&g_Config.bHardwareTessellation, gr->T("Hardware Tessellation")));
 	tessellationHW->OnClick.Add([=](EventParams &e) {
 		settingInfo_->Show(gr->T("HardwareTessellation Tip", "Uses hardware to make curves, always uses a fixed quality"), e.v);
 		return UI::EVENT_CONTINUE;
@@ -656,8 +656,8 @@ void GameSettingsScreen::CreateViews() {
 
 #if PPSSPP_PLATFORM(ANDROID)
 	if (System_GetPropertyInt(SYSPROP_DEVICE_TYPE) == DEVICE_TYPE_MOBILE) {
-		static const char *screenRotation[] = {"Landscape", "Portrait", "Landscape Reversed", "Portrait Reversed"};
-		PopupMultiChoice *rot = systemSettings->Add(new PopupMultiChoice(&g_Config.iScreenRotation, co->T("Screen Rotation"), screenRotation, 1, ARRAY_SIZE(screenRotation), co->GetName(), screenManager()));
+		static const char *screenRotation[] = {"Auto", "Landscape", "Portrait", "Landscape Reversed", "Portrait Reversed", "Landscape Auto"};
+		PopupMultiChoice *rot = systemSettings->Add(new PopupMultiChoice(&g_Config.iScreenRotation, co->T("Screen Rotation"), screenRotation, 0, ARRAY_SIZE(screenRotation), co->GetName(), screenManager()));
 		rot->OnChoice.Handle(this, &GameSettingsScreen::OnScreenRotation);
 
 		if (System_GetPropertyBool(SYSPROP_SUPPORTS_SUSTAINED_PERF_MODE)) {
@@ -684,6 +684,7 @@ void GameSettingsScreen::CreateViews() {
 	}
 
 	systemSettings->Add(new Choice(sy->T("Restore Default Settings")))->OnClick.Handle(this, &GameSettingsScreen::OnRestoreDefaultSettings);
+	systemSettings->Add(new CheckBox(&g_Config.bEnableStateUndo, sy->T("Savestate slot backups")));
 	systemSettings->Add(new CheckBox(&g_Config.bEnableAutoLoad, sy->T("Auto Load Newest Savestate")));
 
 #if defined(USING_WIN_UI)
@@ -712,7 +713,11 @@ void GameSettingsScreen::CreateViews() {
 			SavePathInMyDocumentChoice->SetEnabled(false);
 	} else {
 		if (installed_ && (result == S_OK)) {
+#ifdef _MSC_VER
 			std::ifstream inputFile(ConvertUTF8ToWString(installedFile));
+#else
+			std::ifstream inputFile(installedFile);
+#endif
 			if (!inputFile.fail() && inputFile.is_open()) {
 				std::string tempString;
 				std::getline(inputFile, tempString);

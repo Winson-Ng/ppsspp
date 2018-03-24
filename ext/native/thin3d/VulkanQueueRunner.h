@@ -82,6 +82,7 @@ struct VkRenderData {
 
 enum class VKRStepType : uint8_t {
 	RENDER,
+	RENDER_SKIP,
 	COPY,
 	BLIT,
 	READBACK,
@@ -160,7 +161,8 @@ public:
 	VkRenderPass GetBackbufferRenderPass() const {
 		return backbufferRenderPass_;
 	}
-	VkRenderPass GetRenderPass(VKRRenderPassAction colorLoadAction, VKRRenderPassAction depthLoadAction, VKRRenderPassAction stencilLoadAction);
+	VkRenderPass GetRenderPass(VKRRenderPassAction colorLoadAction, VKRRenderPassAction depthLoadAction, VKRRenderPassAction stencilLoadAction,
+		VkImageLayout prevColorLayout, VkImageLayout prevDepthLayout, VkImageLayout finalColorLayout);
 
 	inline int RPIndex(VKRRenderPassAction color, VKRRenderPassAction depth) {
 		return (int)depth * 3 + (int)color;
@@ -201,6 +203,10 @@ private:
 		VKRRenderPassAction colorAction;
 		VKRRenderPassAction depthAction;
 		VKRRenderPassAction stencilAction;
+		VkImageLayout prevColorLayout;
+		VkImageLayout prevDepthLayout;
+		VkImageLayout finalColorLayout;
+		// TODO: Also pre-transition depth, for copies etc.
 	};
 
 	// Renderpasses, all combinations of preserving or clearing or dont-care-ing fb contents.

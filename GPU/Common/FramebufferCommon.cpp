@@ -1355,7 +1355,7 @@ void FramebufferManagerCommon::FindTransferFramebuffers(VirtualFramebuffer *&dst
 
 			// Some games use mismatching bitdepths.  But make sure the stride matches.
 			// If it doesn't, generally this means we detected the framebuffer with too large a height.
-			bool match = yOffset < dstYOffset && yOffset < vfb->height;
+			bool match = yOffset < dstYOffset && (int)yOffset <= (int)vfb->height - dstHeight;
 			if (match && vfb_byteStride != byteStride) {
 				// Grand Knights History copies with a mismatching stride but a full line at a time.
 				// Makes it hard to detect the wrong transfers in e.g. God of War.
@@ -1385,7 +1385,7 @@ void FramebufferManagerCommon::FindTransferFramebuffers(VirtualFramebuffer *&dst
 			const u32 byteOffset = srcBasePtr - vfb_address;
 			const u32 byteStride = srcStride * bpp;
 			const u32 yOffset = byteOffset / byteStride;
-			bool match = yOffset < srcYOffset && yOffset < vfb->height;
+			bool match = yOffset < srcYOffset && (int)yOffset <= (int)vfb->height - srcHeight;
 			if (match && vfb_byteStride != byteStride) {
 				if (width != srcStride || (byteStride * height != vfb_byteStride && byteStride * height != vfb_byteWidth)) {
 					match = false;
@@ -2042,6 +2042,10 @@ void FramebufferManagerCommon::PackFramebufferSync_(VirtualFramebuffer *vfb, int
 	DEBUG_LOG(G3D, "Reading framebuffer to mem, fb_address = %08x", fb_address);
 
 	draw_->CopyFramebufferToMemorySync(vfb->fbo, Draw::FB_COLOR_BIT, x, y, w, h, destFormat, destPtr, vfb->fb_stride);
+
+	// A new command buffer will begin after CopyFrameBufferToMemorySync, so we need to trigger
+	// updates of any dynamic command buffer state by dirtying some stuff.
+	gstate_c.Dirty(DIRTY_VIEWPORTSCISSOR_STATE | DIRTY_BLEND_STATE | DIRTY_DEPTHSTENCIL_STATE | DIRTY_RASTER_STATE);
 	gpuStats.numReadbacks++;
 }
 

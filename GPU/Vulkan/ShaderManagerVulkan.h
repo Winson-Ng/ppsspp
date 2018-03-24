@@ -17,6 +17,8 @@
 
 #pragma once
 
+#include <cstdio>
+
 #include "base/basictypes.h"
 #include "Common/Hashmaps.h"
 #include "Common/Vulkan/VulkanMemory.h"
@@ -33,16 +35,16 @@ class VulkanPushBuffer;
 
 class VulkanFragmentShader {
 public:
-	VulkanFragmentShader(VulkanContext *vulkan, FShaderID id, const char *code, bool useHWTransform);
+	VulkanFragmentShader(VulkanContext *vulkan, FShaderID id, const char *code);
 	~VulkanFragmentShader();
 
 	const std::string &source() const { return source_; }
 
 	bool Failed() const { return failed_; }
-	bool UseHWTransform() const { return useHWTransform_; }
 
 	std::string GetShaderString(DebugShaderStringType type) const;
 	VkShaderModule GetModule() const { return module_; }
+	const FShaderID &GetID() { return id_; }
 
 protected:	
 	VkShaderModule module_;
@@ -50,25 +52,22 @@ protected:
 	VulkanContext *vulkan_;
 	std::string source_;
 	bool failed_;
-	bool useHWTransform_;
 	FShaderID id_;
 };
 
 class VulkanVertexShader {
 public:
-	VulkanVertexShader(VulkanContext *vulkan, VShaderID id, const char *code, int vertType, bool useHWTransform, bool usesLighting);
+	VulkanVertexShader(VulkanContext *vulkan, VShaderID id, const char *code, bool useHWTransform);
 	~VulkanVertexShader();
 
 	const std::string &source() const { return source_; }
 
 	bool Failed() const { return failed_; }
 	bool UseHWTransform() const { return useHWTransform_; }
-	bool HasLights() const {
-		return usesLighting_;
-	}
 
 	std::string GetShaderString(DebugShaderStringType type) const;
 	VkShaderModule GetModule() const { return module_; }
+	const VShaderID &GetID() { return id_; }
 
 protected:
 	VkShaderModule module_;
@@ -77,7 +76,6 @@ protected:
 	std::string source_;
 	bool failed_;
 	bool useHWTransform_;
-	bool usesLighting_;
 	VShaderID id_;
 };
 
@@ -98,6 +96,12 @@ public:
 	int GetNumVertexShaders() const { return (int)vsCache_.size(); }
 	int GetNumFragmentShaders() const { return (int)fsCache_.size(); }
 
+	// Used for saving/loading the cache. Don't need to be particularly fast.
+	VulkanVertexShader *GetVertexShaderFromID(VShaderID id) { return vsCache_.Get(id); }
+	VulkanFragmentShader *GetFragmentShaderFromID(FShaderID id) { return fsCache_.Get(id); }
+	VulkanVertexShader *GetVertexShaderFromModule(VkShaderModule module);
+	VulkanFragmentShader *GetFragmentShaderFromModule(VkShaderModule module);
+
 	std::vector<std::string> DebugGetShaderIDs(DebugShaderType type);
 	std::string DebugGetShaderString(std::string id, DebugShaderType type, DebugShaderStringType stringType);
 
@@ -114,6 +118,9 @@ public:
 	uint32_t PushLightBuffer(VulkanPushBuffer *dest, VkBuffer *buf) {
 		return dest->PushAligned(&ub_lights, sizeof(ub_lights), uboAlignment_, buf);
 	}
+
+	bool LoadCache(FILE *f);
+	void SaveCache(FILE *f);
 
 private:
 	void Clear();

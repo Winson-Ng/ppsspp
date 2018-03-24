@@ -9,7 +9,7 @@
 #import "FileManagerTableViewController.h"
 #import "FileManagerTableViewCell.h"
 #import "Util/ShareInfo.h"
-#import "Util/WebFileManager.h"
+#import "ios/GCDWebFileManager.h"
 
 @interface FileManagerTableViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -25,12 +25,17 @@
 }
 
 NSArray *data;
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    GCDWebFileManager *webFileManager=(GCDWebFileManager*)util::ShareInfo::Instance().GetWebFileManager();
+    util::ShareInfo::Instance().UpdateButtonBarLabel( "WebFileManager: " +webFileManager->GetUrl());
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UINib *nib=[UINib nibWithNibName:@"FileManagerTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"all-in-one-cell"];
+    //UINib *nib=[UINib nibWithNibName:@"FileManagerTableViewCell" bundle:nil];
+    //[self.tableView registerNib:nib forCellReuseIdentifier:@"all-in-one-cell"];
     
-    util::WebFileManager *webFileManager=util::ShareInfo::Instance().GetWebFileManager();
+    GCDWebFileManager *webFileManager=(GCDWebFileManager*)util::ShareInfo::Instance().GetWebFileManager();
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,15 +49,19 @@ NSArray *data;
                        @{
                            @"valueType":[NSNumber numberWithInteger:BOOLEAN],
                            @"label":^(){return @"Auto Start";},
-                           @"getValue":^(){return @true;},
-                           @"setValue":^(NSObject *value){}
+                           @"getValue":^(){return [NSNumber numberWithBool:webFileManager->IsAutoStart()];},
+                           @"setValue":^(NSObject *value){
+                               webFileManager->SetAutoStart([(NSNumber*)value boolValue]);
+                           }
                            },
                        @{
                            @"valueType":[NSNumber numberWithInteger:NUMBER],
                            
                            @"label":^(){return @"Port";},
-                           @"getValue":^(){return @true;},
-                           @"setValue":^(NSObject *value){}
+                           @"getValue":^(){return webFileManager->GetPort();},
+                           @"setValue":^(NSObject *value){
+                               webFileManager->SetPort((NSNumber*)value);
+                           }
                            },
                        ]
                },
@@ -61,18 +70,19 @@ NSArray *data;
                @"data":@[
                        @{
                            @"valueType":[NSNumber numberWithInteger:BOOLEAN],
-                           @"label":^(){return @"";},
-                           @"getValue":^(){
-                               return webFileManager->IsRunning();
-                           },
-                           @"setValue":^(NSObject *value){}
-                           },
-                       @{
-                           @"valueType":[NSNumber numberWithInteger:NONE],
                            @"label":^(){
                                NSString* serverUrl = [NSString stringWithUTF8String:webFileManager->GetUrl().c_str()];
                                return serverUrl;
-                               
+                           },
+                           @"getValue":^(){
+                               return [NSNumber numberWithBool:webFileManager->IsRunning()];
+                           },
+                           @"setValue":^(NSObject *value){
+                               if([(NSNumber*)value boolValue]){
+                                   webFileManager->Start();
+                               }else{
+                                   webFileManager->Stop();
+                               }
                            }
                            }
                        ]
@@ -101,24 +111,17 @@ NSArray *data;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict=((NSArray *)(data[indexPath.section][@"data"]))[indexPath.item];
-    //NSString *rowId=[NSString stringWithFormat: @"%@_%ld", @"row_", indexPath.row];;
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"all-in-one-cell"];
+    NSString *rowId=[NSString stringWithFormat: @"%ld_%ld", indexPath.section, indexPath.item];
+    rowId=@"all-in-one";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:rowId];
     if(cell == nil){
-        cell=[[FileManagerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"all-in-one-cell" ];
-        
+        cell=[[FileManagerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rowId];
     }
-    [[cell detailTextLabel] setHidden:true];
     FileManagerTableViewCell *castedCell=(FileManagerTableViewCell*)cell;
+    //FileManagerTableViewCell *castedCell=[[FileManagerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     
-    int value=[(NSNumber*)dict[@"valueType"] intValue];
-    [castedCell setValueType:(FileManagerTableViewCellValueType)value];
-    if(value>0){
-        [castedCell setValueGetter:dict[@"getValue"]];
-        [castedCell setValueSetter:dict[@"setValue"]];
-    }
-    
-    [castedCell setLabelValueGetter:dict[@"label"]];
-    return cell;
+    [castedCell setData:dict];
+    return castedCell;
 }
 /*
  // Override to support conditional editing of the table view.

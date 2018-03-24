@@ -835,8 +835,11 @@ void MainScreen::CreateViews() {
 	}
     
     
+        this->_buttonBarTextView=new TextView(mm->T("WebFileManager: " + util::ShareInfo::Instance().GetWebFileManager()->GetUrl()), ALIGN_HCENTER, false);
     
-    leftColumn->Add(new TextView(mm->T("WebFileManager: " + util::ShareInfo::Instance().GetWebFileManager()->GetUrl()), ALIGN_HCENTER, false));
+    util::ButtonBarLabelUpdateCallback fun=(util::ButtonBarLabelUpdateCallback)std::bind(&MainScreen::TriggerOnButtonBarLabelUpdate,this,std::placeholders::_1);
+    util::ShareInfo::Instance().SetUpdateButtonBarLabelDelegate(fun);
+    leftColumn->Add(this->_buttonBarTextView);
 
     
     
@@ -921,6 +924,9 @@ void MainScreen::CreateViews() {
 	}
 }
 
+void MainScreen::TriggerOnButtonBarLabelUpdate(std::string label){
+    this->_buttonBarTextView->SetText(label);
+}
 UI::EventReturn MainScreen::OnAllowStorage(UI::EventParams &e) {
 	System_AskForPermission(SYSTEM_PERMISSION_STORAGE);
 	return UI::EVENT_DONE;

@@ -37,4 +37,26 @@ namespace util {
     void ShareInfo::SetWebFileManager(WebFileManager *_webFileManager){
         this->_webFileManager=_webFileManager;
     }
+    
+    
+    void ShareInfo::UpdateButtonBarLabel(std::string label){
+        if(this->buttonBarLabelUpdateCallback!=0){
+            this->buttonBarLabelUpdateCallback(label);
+        }
+    }
+    void ShareInfo::SetUpdateButtonBarLabelDelegate(ButtonBarLabelUpdateCallback callback){
+        this->buttonBarLabelUpdateCallback=callback;
+    }
+    
+//    UI::TextView* ShareInfo::GetBottomBarTextView(){
+//        if(this->_textView==nullptr){
+//            _textView=new UI::TextView("", 4, false);
+//        }
+//        return _textView;
+//    }
+//    
+//    void ShareInfo::SetBottomBarLabel(std::string label){
+//        UI::TextView *textview=this->GetBottomBarTextView();
+//        textview->SetText(label);
+//    }
 }

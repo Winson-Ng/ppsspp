@@ -86,11 +86,13 @@
     
     util::ShareInfo::Instance().SetWebFileManager(manager);
     
-    
-    manager->Start();
-    
-    
+    if(manager->IsAutoStart()){
+        manager->Start();
+    }
+   
     std::string str=manager->GetUrl();
+    
+    //util::ShareInfo::Instance().SetBottomBarLabel( "WebFileManager: " +str);
     
     NSString* serverUrl = [NSString stringWithUTF8String:str.c_str()];
     NSLog(@"Visit %@ in your web browser", serverUrl);

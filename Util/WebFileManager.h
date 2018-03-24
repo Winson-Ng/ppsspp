@@ -8,8 +8,8 @@
 #ifndef WebFileManager_hpp
 #define WebFileManager_hpp
 
-#include <stdio.h>
-#include <string>
+#import <stdio.h>
+#import <string>
 
 namespace util {
     class WebFileManager {

@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                 <items>
-                    <navigationItem title="Title" id="gEO-A4-FjF">
+                    <navigationItem title="Web File Manager Setting" id="gEO-A4-FjF">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="1St-S6-ZlI">
                             <connections>
                                 <action selector="doneButtonClick:" destination="-1" id="tfQ-Kt-EZC"/>

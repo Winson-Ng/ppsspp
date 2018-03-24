@@ -21,6 +21,7 @@
 
 #include "file/path.h"
 #include "ui/ui_screen.h"
+#include "ui/view.h"
 #include "ui/viewgroup.h"
 #include "UI/MiscScreens.h"
 
@@ -78,7 +79,9 @@ public:
 
 	// Horrible hack to show the demos & homebrew tab after having installed a game from a zip file.
 	static bool showHomebrewTab;
-
+private:
+    UI::TextView *_buttonBarTextView;
+    void TriggerOnButtonBarLabelUpdate(std::string label);
 protected:
 	void CreateViews() override;
 	void DrawBackground(UIContext &dc) override;

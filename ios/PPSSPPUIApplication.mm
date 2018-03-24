@@ -59,50 +59,50 @@
 #define GSEVENT_FLAG_RALT       4194304         // 0x00400000 - not sent IOS9
 
 @implementation PPSSPPUIApplication
-
-- (void)decodeKeyEvent:(NSInteger *)eventMem {
-    NSInteger eventType = eventMem[GSEVENT_TYPE];
-    NSInteger eventScanCode = eventMem[GSEVENTKEY_KEYCODE];
-    
-    //NSLog(@"Got key: %d", (int)eventScanCode);
-    
-    if (eventType == GSEVENT_TYPE_KEYUP) {
-        struct KeyInput key;
-        key.flags = KEY_UP;
-        key.keyCode = getSmartKeyboardMap((int)eventScanCode);
-        key.deviceId = DEVICE_ID_KEYBOARD;
-        NativeKey(key);
-    } else if (GSEVENT_TYPE_KEYDOWN) {
-        struct KeyInput key;
-        key.flags = KEY_DOWN;
-        key.keyCode = getSmartKeyboardMap((int)eventScanCode);
-        key.deviceId = DEVICE_ID_KEYBOARD;
-        NativeKey(key);
-    }
-    
-}
-
-- (void)handleKeyUIEvent:(UIEvent *) event {
-    if ([event respondsToSelector:@selector(_gsEvent)]) {
-        NSInteger *eventMem;
-        
-        eventMem = (NSInteger *) (__bridge void*)[event performSelector:@selector(_gsEvent)];
-        if (eventMem) {
-            [self decodeKeyEvent:eventMem];
-        }
-    }
-}
-
-- (void)sendEvent:(UIEvent *)event {
-    [super sendEvent:event];
-    if ([event respondsToSelector:@selector(_gsEvent)]) {
-        NSInteger *eventMem;
-        
-        eventMem = (NSInteger *) (__bridge void*)[event performSelector:@selector(_gsEvent)];
-        if (eventMem) {
-            [self decodeKeyEvent:eventMem];
-        }
-    }
-}
+//
+//- (void)decodeKeyEvent:(NSInteger *)eventMem {
+//    NSInteger eventType = eventMem[GSEVENT_TYPE];
+//    NSInteger eventScanCode = eventMem[GSEVENTKEY_KEYCODE];
+//
+//    //NSLog(@"Got key: %d", (int)eventScanCode);
+//
+//    if (eventType == GSEVENT_TYPE_KEYUP) {
+//        struct KeyInput key;
+//        key.flags = KEY_UP;
+//        key.keyCode = getSmartKeyboardMap((int)eventScanCode);
+//        key.deviceId = DEVICE_ID_KEYBOARD;
+//        NativeKey(key);
+//    } else if (GSEVENT_TYPE_KEYDOWN) {
+//        struct KeyInput key;
+//        key.flags = KEY_DOWN;
+//        key.keyCode = getSmartKeyboardMap((int)eventScanCode);
+//        key.deviceId = DEVICE_ID_KEYBOARD;
+//        NativeKey(key);
+//    }
+//
+//}
+//
+//- (void)handleKeyUIEvent:(UIEvent *) event {
+//    if ([event respondsToSelector:@selector(_gsEvent)]) {
+//        NSInteger *eventMem;
+//
+//        eventMem = (NSInteger *) (__bridge void*)[event performSelector:@selector(_gsEvent)];
+//        if (eventMem) {
+//            [self decodeKeyEvent:eventMem];
+//        }
+//    }
+//}
+//
+//- (void)sendEvent:(UIEvent *)event {
+//    [super sendEvent:event];
+//    if ([event respondsToSelector:@selector(_gsEvent)]) {
+//        NSInteger *eventMem;
+//
+//        eventMem = (NSInteger *) (__bridge void*)[event performSelector:@selector(_gsEvent)];
+//        if (eventMem) {
+//            [self decodeKeyEvent:eventMem];
+//        }
+//    }
+//}
 
 @end

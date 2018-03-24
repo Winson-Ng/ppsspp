@@ -18,9 +18,14 @@ class GCDWebFileManager : public util::WebFileManager
     {
     public:
         GCDWebFileManager();
+        
+        NSNumber*  GetPort();
+        void SetPort(NSNumber*  port);
         std::string GetUrl();
         void Start();
         void Stop();
+        bool IsAutoStart();
+        void SetAutoStart(bool isOn);
         bool IsRunning();
         void ShowView();
     private:

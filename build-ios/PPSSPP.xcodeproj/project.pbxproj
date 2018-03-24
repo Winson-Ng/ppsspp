@@ -712,6 +712,7 @@
 		F429EFA1FB5A4304B04D0EB0 /* CompLoadStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D66728DB8E4CDFA11984B8 /* CompLoadStore.cpp */; };
 		F48DA35BACDE457789EACE78 /* zip_get_archive_comment.c in Sources */ = {isa = PBXBuildFile; fileRef = F4CC820FD97549439FDF724F /* zip_get_archive_comment.c */; };
 		F4FFE592F337493688191CB7 /* sceUsbGps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEA20BCE70CD4DCA84C9FBEF /* sceUsbGps.cpp */; };
+		F50DDE602065B02E00B580EC /* libutil.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F50DDE5F2065B02E00B580EC /* libutil.tbd */; };
 		F53FFF1C205D6905006EB7F8 /* GCDWebFileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */; };
 		F5400BF3C3CE4D94A839944E /* sceCcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B53CC983409947088472B4CF /* sceCcc.cpp */; };
 		F5431DD3205D7CB9005B9A0C /* GCDWebDAVServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E2C693205D08FF003B6975 /* GCDWebDAVServer.m */; };
@@ -772,7 +773,6 @@
 		F59CF6BA20614927002DF589 /* FileManagerTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */; };
 		F59CF6BB20614927002DF589 /* FileManagerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */; };
 		F59CF6BF20614988002DF589 /* FileManagerTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */; };
-		F59CF6C020614988002DF589 /* FileManagerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */; };
 		F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5E2C69C205D0901003B6975 /* GCDWebUploader.bundle */; };
 		F60DF44324C847E9B7FA28F3 /* Pool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4EB30D815A848818ECF9722 /* Pool.cpp */; };
 		F6A5C502BF5742D79E1470EA /* RetryingFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17B247221A72413D82700A17 /* RetryingFileLoader.cpp */; };
@@ -3048,6 +3048,7 @@
 		F4C5C897F17F48DEA53EDA42 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; lastKnownFileType = text.plist; name = Info.plist; path = "build-ios/ext/udis86/CMakeFiles/udis86.dir/Info.plist"; sourceTree = SOURCE_ROOT; };
 		F4CC820FD97549439FDF724F /* zip_get_archive_comment.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zip_get_archive_comment.c; path = ext/native/ext/libzip/zip_get_archive_comment.c; sourceTree = SOURCE_ROOT; };
 		F4EB30D815A848818ECF9722 /* Pool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Pool.cpp; path = ext/armips/Archs/ARM/Pool.cpp; sourceTree = SOURCE_ROOT; };
+		F50DDE5F2065B02E00B580EC /* libutil.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libutil.tbd; path = usr/lib/libutil.tbd; sourceTree = SDKROOT; };
 		F529D0D53B854C69B3B1D2F0 /* scePsmf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = scePsmf.cpp; path = Core/HLE/scePsmf.cpp; sourceTree = SOURCE_ROOT; };
 		F534EC51D1104608BD9CF1E9 /* PSPPlaceholderDialog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PSPPlaceholderDialog.h; path = Core/Dialog/PSPPlaceholderDialog.h; sourceTree = SOURCE_ROOT; };
 		F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = GCDWebFileManager.mm; path = ios/GCDWebFileManager.mm; sourceTree = "<group>"; };
@@ -3066,12 +3067,11 @@
 		F58CE93F205BE42C00C06958 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F58CE941205BE43400C06958 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F58CE943205BE44200C06958 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		F59CF6B720614927002DF589 /* FileManagerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewController.h; path = ios/TableViewCells/FileManagerTableViewController.h; sourceTree = SOURCE_ROOT; };
-		F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewController.mm; path = ios/TableViewCells/FileManagerTableViewController.mm; sourceTree = SOURCE_ROOT; };
-		F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerTableViewController.xib; path = ios/TableViewCells/FileManagerTableViewController.xib; sourceTree = SOURCE_ROOT; };
-		F59CF6BC20614988002DF589 /* FileManagerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewCell.h; path = ios/TableViewCells/FileManagerTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewCell.mm; path = ios/TableViewCells/FileManagerTableViewCell.mm; sourceTree = SOURCE_ROOT; };
-		F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerTableViewCell.xib; path = ios/TableViewCells/FileManagerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		F59CF6B720614927002DF589 /* FileManagerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewController.h; path = ios/FileManagerViews/FileManagerTableViewController.h; sourceTree = SOURCE_ROOT; };
+		F59CF6B820614927002DF589 /* FileManagerTableViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewController.mm; path = ios/FileManagerViews/FileManagerTableViewController.mm; sourceTree = SOURCE_ROOT; };
+		F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FileManagerTableViewController.xib; path = ios/FileManagerViews/FileManagerTableViewController.xib; sourceTree = SOURCE_ROOT; };
+		F59CF6BC20614988002DF589 /* FileManagerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FileManagerTableViewCell.h; path = ios/FileManagerViews/FileManagerTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = FileManagerTableViewCell.mm; path = ios/FileManagerViews/FileManagerTableViewCell.mm; sourceTree = SOURCE_ROOT; };
 		F5AE9082A76D4818B78F04CC /* AsyncIOManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AsyncIOManager.h; path = Core/HW/AsyncIOManager.h; sourceTree = SOURCE_ROOT; };
 		F5E2C690205D08FF003B6975 /* GCDWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerConnection.h; path = GCDWebServer/GCDWebServerConnection.h; sourceTree = SOURCE_ROOT; };
 		F5E2C691205D08FF003B6975 /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDWebServerDataRequest.h; path = GCDWebServer/GCDWebServerDataRequest.h; sourceTree = SOURCE_ROOT; };
@@ -3164,6 +3164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50DDE602065B02E00B580EC /* libutil.tbd in Frameworks */,
 				F5611487205EBCA00011B980 /* SystemConfiguration.framework in Frameworks */,
 				F58CE944205BE44300C06958 /* libxml2.tbd in Frameworks */,
 				F58CE942205BE43400C06958 /* libz.tbd in Frameworks */,
@@ -3728,7 +3729,7 @@
 		2AAE3A6E6A0A4F1DBED2398B /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				F59CF6B220614789002DF589 /* TableViewCells */,
+				F59CF6B220614789002DF589 /* FileManagerViews */,
 				F5611488205ECA470011B980 /* GCDWebFileManager.h */,
 				F53FFF1A205D6905006EB7F8 /* GCDWebFileManager.mm */,
 				F5611483205EB95A0011B980 /* Reachability.h */,
@@ -5882,6 +5883,7 @@
 		F58CE8DC205BD7F800C06958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F50DDE5F2065B02E00B580EC /* libutil.tbd */,
 				F5611486205EBCA00011B980 /* SystemConfiguration.framework */,
 				F58CE943205BE44200C06958 /* libxml2.tbd */,
 				F58CE941205BE43400C06958 /* libz.tbd */,
@@ -5892,7 +5894,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F59CF6B220614789002DF589 /* TableViewCells */ = {
+		F59CF6B220614789002DF589 /* FileManagerViews */ = {
 			isa = PBXGroup;
 			children = (
 				F59CF6B720614927002DF589 /* FileManagerTableViewController.h */,
@@ -5900,9 +5902,8 @@
 				F59CF6B920614927002DF589 /* FileManagerTableViewController.xib */,
 				F59CF6BC20614988002DF589 /* FileManagerTableViewCell.h */,
 				F59CF6BD20614988002DF589 /* FileManagerTableViewCell.mm */,
-				F59CF6BE20614988002DF589 /* FileManagerTableViewCell.xib */,
 			);
-			name = TableViewCells;
+			name = FileManagerViews;
 			sourceTree = "<group>";
 		};
 		F5E2C65D205C259F003B6975 /* GCDWebServer */ = {
@@ -6735,7 +6736,6 @@
 				F59CF6BB20614927002DF589 /* FileManagerTableViewController.xib in Resources */,
 				5C432F84A9604219A7C6F574 /* Launch Screen.storyboard in Resources */,
 				F5E2C6B7205D0906003B6975 /* GCDWebUploader.bundle in Resources */,
-				F59CF6C020614988002DF589 /* FileManagerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

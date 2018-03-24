@@ -100,3 +100,5 @@ debian/ppsspp/
 
 # YouCompleteMe file
 .ycm_extra_conf.pyc
+
+UserInterfaceState.xcuserstate

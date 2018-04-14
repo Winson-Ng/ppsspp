@@ -64,11 +64,11 @@ NSNumber* GCDWebFileManager::GetPort(){
 }
 std::string GCDWebFileManager::GetUrl(){
     std::string result="";
-    if([_webUploader isRunning]){
+    if([_reachability currentReachabilityStatus] != ReachableViaWiFi){
+        result= "Please connect WIFI";
+    }else if([_webUploader isRunning]){
         NSString *url=[[_webUploader serverURL] absoluteString];
         result= std::string([url UTF8String]);
-    }else if([_reachability currentReachabilityStatus] != ReachableViaWiFi){
-        result= "Please connect WIFI";
     }else{
         result= "WebServer not running";
     }
